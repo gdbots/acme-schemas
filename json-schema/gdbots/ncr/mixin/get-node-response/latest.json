@@ -1,0 +1,31 @@
+{
+  "id": "http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/get-node-response/1-0-0.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/node"
+        }
+      ],
+      "pbj": {
+        "type": "message",
+        "rule": "single",
+        "overridable": true
+      }
+    }
+  },
+  "definitions": {
+    "node": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}
