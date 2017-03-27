@@ -1,13 +1,13 @@
 {
   "name": "gdbots/acme-schemas",
   "homepage": "https://github.com/gdbots/acme-schemas",
-  "description": "Sample schemas for common __gdbots__ services",
+  "description": "Sample schemas for common gdbots services",
   "type": "pbj-schema-store",
   "license": "Apache-2.0",
   "require": {
     "php": ">=7.1",
     "gdbots/pbj": "~1.1",
-    "gdbots/schemas": "dev-es as 1.0.0"
+    "gdbots/schemas": "~1.1"
   },
   "require-dev": {
     "composer/composer": "1.0.*@dev",
