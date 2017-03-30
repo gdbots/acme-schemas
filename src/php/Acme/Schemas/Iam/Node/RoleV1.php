@@ -7,20 +7,20 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\Role\RoleV1 as GdbotsIamRoleV1;
-use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait;
+use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Mixin as GdbotsIamRoleV1Mixin;
+use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Trait as GdbotsIamRoleV1Trait;
+use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1 as GdbotsNcrNodeV1;
+use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
+use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
 
 final class RoleV1 extends AbstractMessage implements
     Role,
-    NodeV1,
+    GdbotsNcrNodeV1,
     GdbotsIamRoleV1
   
 {
-    use NodeV1Trait;
-    use RoleV1Trait;
+    use GdbotsNcrNodeV1Trait;
+    use GdbotsIamRoleV1Trait;
 
     /**
      * @return Schema
@@ -30,8 +30,8 @@ final class RoleV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:node:role:1-0-0', __CLASS__,
             [],
             [
-                NodeV1Mixin::create(), 
-                RoleV1Mixin::create()
+                GdbotsNcrNodeV1Mixin::create(), 
+                GdbotsIamRoleV1Mixin::create()
             ]
         );
     }

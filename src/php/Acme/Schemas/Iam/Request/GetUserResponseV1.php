@@ -7,25 +7,21 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetUserResponse\GetUserResponseV1 as GdbotsIamGetUserResponseV1;
-use Gdbots\Schemas\Iam\Mixin\GetUserResponse\GetUserResponseV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\GetUserResponse\GetUserResponseV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait;
+use Gdbots\Schemas\Iam\Mixin\GetUserResponse\GetUserResponseV1Mixin as GdbotsIamGetUserResponseV1Mixin;
+use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1 as GdbotsNcrGetNodeResponseV1;
+use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1Mixin as GdbotsNcrGetNodeResponseV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1 as GdbotsPbjxResponseV1;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin as GdbotsPbjxResponseV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait as GdbotsPbjxResponseV1Trait;
 
 final class GetUserResponseV1 extends AbstractMessage implements
     GetUserResponse,
-    ResponseV1,
-    GetNodeResponseV1,
+    GdbotsPbjxResponseV1,
+    GdbotsNcrGetNodeResponseV1,
     GdbotsIamGetUserResponseV1
   
 {
-    use ResponseV1Trait;
-    use GetNodeResponseV1Trait;
-    use GetUserResponseV1Trait;
+    use GdbotsPbjxResponseV1Trait;
 
     /**
      * @return Schema
@@ -35,9 +31,9 @@ final class GetUserResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-user-response:1-0-0', __CLASS__,
             [],
             [
-                ResponseV1Mixin::create(), 
-                GetNodeResponseV1Mixin::create(), 
-                GetUserResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(), 
+                GdbotsNcrGetNodeResponseV1Mixin::create(), 
+                GdbotsIamGetUserResponseV1Mixin::create()
             ]
         );
     }

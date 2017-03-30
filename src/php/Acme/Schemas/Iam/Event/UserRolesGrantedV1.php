@@ -7,20 +7,18 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1 as GdbotsIamUserRolesGrantedV1;
-use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait;
+use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1Mixin as GdbotsIamUserRolesGrantedV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
 
 final class UserRolesGrantedV1 extends AbstractMessage implements
     UserRolesGranted,
-    EventV1,
+    GdbotsPbjxEventV1,
     GdbotsIamUserRolesGrantedV1
   
 {
-    use EventV1Trait;
-    use UserRolesGrantedV1Trait;
+    use GdbotsPbjxEventV1Trait;
 
     /**
      * @return Schema
@@ -30,8 +28,8 @@ final class UserRolesGrantedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-roles-granted:1-0-0', __CLASS__,
             [],
             [
-                EventV1Mixin::create(), 
-                UserRolesGrantedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(), 
+                GdbotsIamUserRolesGrantedV1Mixin::create()
             ]
         );
     }

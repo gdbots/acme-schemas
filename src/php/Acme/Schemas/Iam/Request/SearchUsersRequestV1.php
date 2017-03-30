@@ -7,25 +7,23 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\SearchUsersRequest\SearchUsersRequestV1 as GdbotsIamSearchUsersRequestV1;
-use Gdbots\Schemas\Iam\Mixin\SearchUsersRequest\SearchUsersRequestV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\SearchUsersRequest\SearchUsersRequestV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1;
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait;
+use Gdbots\Schemas\Iam\Mixin\SearchUsersRequest\SearchUsersRequestV1Mixin as GdbotsIamSearchUsersRequestV1Mixin;
+use Gdbots\Schemas\Iam\Mixin\SearchUsersRequest\SearchUsersRequestV1Trait as GdbotsIamSearchUsersRequestV1Trait;
+use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1 as GdbotsNcrSearchNodesRequestV1;
+use Gdbots\Schemas\Ncr\Mixin\SearchNodesRequest\SearchNodesRequestV1Mixin as GdbotsNcrSearchNodesRequestV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1 as GdbotsPbjxRequestV1;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin as GdbotsPbjxRequestV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait as GdbotsPbjxRequestV1Trait;
 
 final class SearchUsersRequestV1 extends AbstractMessage implements
     SearchUsersRequest,
-    RequestV1,
-    SearchNodesRequestV1,
+    GdbotsPbjxRequestV1,
+    GdbotsNcrSearchNodesRequestV1,
     GdbotsIamSearchUsersRequestV1
   
 {
-    use RequestV1Trait;
-    use SearchNodesRequestV1Trait;
-    use SearchUsersRequestV1Trait;
+    use GdbotsPbjxRequestV1Trait;
+    use GdbotsIamSearchUsersRequestV1Trait;
 
     /**
      * @return Schema
@@ -35,9 +33,9 @@ final class SearchUsersRequestV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:search-users-request:1-0-0', __CLASS__,
             [],
             [
-                RequestV1Mixin::create(), 
-                SearchNodesRequestV1Mixin::create(), 
-                SearchUsersRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(), 
+                GdbotsNcrSearchNodesRequestV1Mixin::create(), 
+                GdbotsIamSearchUsersRequestV1Mixin::create()
             ]
         );
     }

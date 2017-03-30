@@ -7,25 +7,21 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1 as GdbotsIamCreateUserV1;
-use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1;
-use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1;
-use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait;
+use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1Mixin as GdbotsIamCreateUserV1Mixin;
+use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1 as GdbotsNcrCreateNodeV1;
+use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1Mixin as GdbotsNcrCreateNodeV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
+use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Mixin as GdbotsPbjxCommandV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait;
 
 final class CreateUserV1 extends AbstractMessage implements
     CreateUser,
-    CommandV1,
-    CreateNodeV1,
+    GdbotsPbjxCommandV1,
+    GdbotsNcrCreateNodeV1,
     GdbotsIamCreateUserV1
   
 {
-    use CommandV1Trait;
-    use CreateNodeV1Trait;
-    use CreateUserV1Trait;
+    use GdbotsPbjxCommandV1Trait;
 
     /**
      * @return Schema
@@ -35,9 +31,9 @@ final class CreateUserV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:create-user:1-0-0', __CLASS__,
             [],
             [
-                CommandV1Mixin::create(), 
-                CreateNodeV1Mixin::create(), 
-                CreateUserV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(), 
+                GdbotsNcrCreateNodeV1Mixin::create(), 
+                GdbotsIamCreateUserV1Mixin::create()
             ]
         );
     }

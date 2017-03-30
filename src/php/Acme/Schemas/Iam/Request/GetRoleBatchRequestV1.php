@@ -7,25 +7,21 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1 as GdbotsIamGetRoleBatchRequestV1;
-use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait;
+use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1Mixin as GdbotsIamGetRoleBatchRequestV1Mixin;
+use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1 as GdbotsNcrGetNodeBatchRequestV1;
+use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1Mixin as GdbotsNcrGetNodeBatchRequestV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1 as GdbotsPbjxRequestV1;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin as GdbotsPbjxRequestV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait as GdbotsPbjxRequestV1Trait;
 
 final class GetRoleBatchRequestV1 extends AbstractMessage implements
     GetRoleBatchRequest,
-    RequestV1,
-    GetNodeBatchRequestV1,
+    GdbotsPbjxRequestV1,
+    GdbotsNcrGetNodeBatchRequestV1,
     GdbotsIamGetRoleBatchRequestV1
   
 {
-    use RequestV1Trait;
-    use GetNodeBatchRequestV1Trait;
-    use GetRoleBatchRequestV1Trait;
+    use GdbotsPbjxRequestV1Trait;
 
     /**
      * @return Schema
@@ -35,9 +31,9 @@ final class GetRoleBatchRequestV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-role-batch-request:1-0-0', __CLASS__,
             [],
             [
-                RequestV1Mixin::create(), 
-                GetNodeBatchRequestV1Mixin::create(), 
-                GetRoleBatchRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(), 
+                GdbotsNcrGetNodeBatchRequestV1Mixin::create(), 
+                GdbotsIamGetRoleBatchRequestV1Mixin::create()
             ]
         );
     }

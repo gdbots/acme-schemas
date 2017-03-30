@@ -7,20 +7,18 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\ListAllRolesResponse\ListAllRolesResponseV1 as GdbotsIamListAllRolesResponseV1;
-use Gdbots\Schemas\Iam\Mixin\ListAllRolesResponse\ListAllRolesResponseV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\ListAllRolesResponse\ListAllRolesResponseV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait;
+use Gdbots\Schemas\Iam\Mixin\ListAllRolesResponse\ListAllRolesResponseV1Mixin as GdbotsIamListAllRolesResponseV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1 as GdbotsPbjxResponseV1;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Mixin as GdbotsPbjxResponseV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait as GdbotsPbjxResponseV1Trait;
 
 final class ListAllRolesResponseV1 extends AbstractMessage implements
     ListAllRolesResponse,
-    ResponseV1,
+    GdbotsPbjxResponseV1,
     GdbotsIamListAllRolesResponseV1
   
 {
-    use ResponseV1Trait;
-    use ListAllRolesResponseV1Trait;
+    use GdbotsPbjxResponseV1Trait;
 
     /**
      * @return Schema
@@ -30,8 +28,8 @@ final class ListAllRolesResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:list-all-roles-response:1-0-0', __CLASS__,
             [],
             [
-                ResponseV1Mixin::create(), 
-                ListAllRolesResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(), 
+                GdbotsIamListAllRolesResponseV1Mixin::create()
             ]
         );
     }

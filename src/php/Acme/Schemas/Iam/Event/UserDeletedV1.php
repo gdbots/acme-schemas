@@ -7,25 +7,21 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserDeleted\UserDeletedV1 as GdbotsIamUserDeletedV1;
-use Gdbots\Schemas\Iam\Mixin\UserDeleted\UserDeletedV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\UserDeleted\UserDeletedV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1;
-use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait;
+use Gdbots\Schemas\Iam\Mixin\UserDeleted\UserDeletedV1Mixin as GdbotsIamUserDeletedV1Mixin;
+use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1 as GdbotsNcrNodeDeletedV1;
+use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1Mixin as GdbotsNcrNodeDeletedV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
 
 final class UserDeletedV1 extends AbstractMessage implements
     UserDeleted,
-    EventV1,
-    NodeDeletedV1,
+    GdbotsPbjxEventV1,
+    GdbotsNcrNodeDeletedV1,
     GdbotsIamUserDeletedV1
   
 {
-    use EventV1Trait;
-    use NodeDeletedV1Trait;
-    use UserDeletedV1Trait;
+    use GdbotsPbjxEventV1Trait;
 
     /**
      * @return Schema
@@ -35,9 +31,9 @@ final class UserDeletedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-deleted:1-0-0', __CLASS__,
             [],
             [
-                EventV1Mixin::create(), 
-                NodeDeletedV1Mixin::create(), 
-                UserDeletedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(), 
+                GdbotsNcrNodeDeletedV1Mixin::create(), 
+                GdbotsIamUserDeletedV1Mixin::create()
             ]
         );
     }

@@ -7,20 +7,18 @@ use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1 as GdbotsIamUserRolesRevokedV1;
-use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1Mixin;
-use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1Trait;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin;
-use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait;
+use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1Mixin as GdbotsIamUserRolesRevokedV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Mixin as GdbotsPbjxEventV1Mixin;
+use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1Trait as GdbotsPbjxEventV1Trait;
 
 final class UserRolesRevokedV1 extends AbstractMessage implements
     UserRolesRevoked,
-    EventV1,
+    GdbotsPbjxEventV1,
     GdbotsIamUserRolesRevokedV1
   
 {
-    use EventV1Trait;
-    use UserRolesRevokedV1Trait;
+    use GdbotsPbjxEventV1Trait;
 
     /**
      * @return Schema
@@ -30,8 +28,8 @@ final class UserRolesRevokedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-roles-revoked:1-0-0', __CLASS__,
             [],
             [
-                EventV1Mixin::create(), 
-                UserRolesRevokedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(), 
+                GdbotsIamUserRolesRevokedV1Mixin::create()
             ]
         );
     }
