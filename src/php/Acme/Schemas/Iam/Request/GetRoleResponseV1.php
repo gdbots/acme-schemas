@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetRoleResponse\GetRoleResponseV1 as GdbotsIamGetRoleResponseV1;
 use Gdbots\Schemas\Iam\Mixin\GetRoleResponse\GetRoleResponseV1Mixin as GdbotsIamGetRoleResponseV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1 as GdbotsNcrGetNodeResponseV1;
@@ -19,7 +17,6 @@ final class GetRoleResponseV1 extends AbstractMessage implements
     GdbotsPbjxResponseV1,
     GdbotsNcrGetNodeResponseV1,
     GdbotsIamGetRoleResponseV1
-  
 {
     use GdbotsPbjxResponseV1Trait;
 

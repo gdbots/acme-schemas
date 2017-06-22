@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Node;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\Role\RoleV1 as GdbotsIamRoleV1;
 use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Mixin as GdbotsIamRoleV1Mixin;
 use Gdbots\Schemas\Iam\Mixin\Role\RoleV1Trait as GdbotsIamRoleV1Trait;
@@ -17,7 +15,6 @@ final class RoleV1 extends AbstractMessage implements
     Role,
     GdbotsNcrNodeV1,
     GdbotsIamRoleV1
-  
 {
     use GdbotsNcrNodeV1Trait;
     use GdbotsIamRoleV1Trait;

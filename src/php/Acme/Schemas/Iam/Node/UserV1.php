@@ -1,5 +1,5 @@
 <?php
-
+//test
 namespace Acme\Schemas\Iam\Node;
 
 use Acme\Schemas\Iam\UserId;
@@ -24,7 +24,6 @@ final class UserV1 extends AbstractMessage implements
     GdbotsIamUserV1,
     GdbotsNcrIndexedV1,
     GdbotsCommonTaggableV1
-  
 {
     use GdbotsNcrNodeV1Trait;
     use GdbotsIamUserV1Trait;
@@ -39,13 +38,13 @@ final class UserV1 extends AbstractMessage implements
                 Fb::create('_id', T\IdentifierType::create())
                     ->required()
                     ->withDefault(function() { return UserId::generate(); })
-                    ->className('Acme\Schemas\Iam\UserId')
+                    ->className(UserId::class)
                     ->build()
             ],
             [
-                GdbotsNcrNodeV1Mixin::create(), 
-                GdbotsIamUserV1Mixin::create(), 
-                GdbotsNcrIndexedV1Mixin::create(), 
+                GdbotsNcrNodeV1Mixin::create(),
+                GdbotsIamUserV1Mixin::create(),
+                GdbotsNcrIndexedV1Mixin::create(),
                 GdbotsCommonTaggableV1Mixin::create()
             ]
         );

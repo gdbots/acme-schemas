@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserUpdated\UserUpdatedV1 as GdbotsIamUserUpdatedV1;
 use Gdbots\Schemas\Iam\Mixin\UserUpdated\UserUpdatedV1Mixin as GdbotsIamUserUpdatedV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\NodeUpdated\NodeUpdatedV1 as GdbotsNcrNodeUpdatedV1;
@@ -19,7 +17,6 @@ final class UserUpdatedV1 extends AbstractMessage implements
     GdbotsPbjxEventV1,
     GdbotsNcrNodeUpdatedV1,
     GdbotsIamUserUpdatedV1
-  
 {
     use GdbotsPbjxEventV1Trait;
 

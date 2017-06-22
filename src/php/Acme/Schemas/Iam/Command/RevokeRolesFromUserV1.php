@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\RevokeRolesFromUser\RevokeRolesFromUserV1 as GdbotsIamRevokeRolesFromUserV1;
 use Gdbots\Schemas\Iam\Mixin\RevokeRolesFromUser\RevokeRolesFromUserV1Mixin as GdbotsIamRevokeRolesFromUserV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
@@ -16,7 +14,6 @@ final class RevokeRolesFromUserV1 extends AbstractMessage implements
     RevokeRolesFromUser,
     GdbotsPbjxCommandV1,
     GdbotsIamRevokeRolesFromUserV1
-  
 {
     use GdbotsPbjxCommandV1Trait;
 

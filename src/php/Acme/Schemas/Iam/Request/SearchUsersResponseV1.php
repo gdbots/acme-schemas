@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\SearchUsersResponse\SearchUsersResponseV1 as GdbotsIamSearchUsersResponseV1;
 use Gdbots\Schemas\Iam\Mixin\SearchUsersResponse\SearchUsersResponseV1Mixin as GdbotsIamSearchUsersResponseV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\SearchNodesResponse\SearchNodesResponseV1 as GdbotsNcrSearchNodesResponseV1;
@@ -19,7 +17,6 @@ final class SearchUsersResponseV1 extends AbstractMessage implements
     GdbotsPbjxResponseV1,
     GdbotsNcrSearchNodesResponseV1,
     GdbotsIamSearchUsersResponseV1
-  
 {
     use GdbotsPbjxResponseV1Trait;
 

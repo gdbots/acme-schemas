@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GrantRolesToUser\GrantRolesToUserV1 as GdbotsIamGrantRolesToUserV1;
 use Gdbots\Schemas\Iam\Mixin\GrantRolesToUser\GrantRolesToUserV1Mixin as GdbotsIamGrantRolesToUserV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
@@ -16,7 +14,6 @@ final class GrantRolesToUserV1 extends AbstractMessage implements
     GrantRolesToUser,
     GdbotsPbjxCommandV1,
     GdbotsIamGrantRolesToUserV1
-  
 {
     use GdbotsPbjxCommandV1Trait;
 

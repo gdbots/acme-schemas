@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetRoleHistoryResponse\GetRoleHistoryResponseV1 as GdbotsIamGetRoleHistoryResponseV1;
 use Gdbots\Schemas\Iam\Mixin\GetRoleHistoryResponse\GetRoleHistoryResponseV1Mixin as GdbotsIamGetRoleHistoryResponseV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\GetEventsResponse\GetEventsResponseV1 as GdbotsPbjxGetEventsResponseV1;
@@ -19,7 +17,6 @@ final class GetRoleHistoryResponseV1 extends AbstractMessage implements
     GdbotsPbjxResponseV1,
     GdbotsPbjxGetEventsResponseV1,
     GdbotsIamGetRoleHistoryResponseV1
-  
 {
     use GdbotsPbjxResponseV1Trait;
 

@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\RoleUpdated\RoleUpdatedV1 as GdbotsIamRoleUpdatedV1;
 use Gdbots\Schemas\Iam\Mixin\RoleUpdated\RoleUpdatedV1Mixin as GdbotsIamRoleUpdatedV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\NodeUpdated\NodeUpdatedV1 as GdbotsNcrNodeUpdatedV1;
@@ -19,7 +17,6 @@ final class RoleUpdatedV1 extends AbstractMessage implements
     GdbotsPbjxEventV1,
     GdbotsNcrNodeUpdatedV1,
     GdbotsIamRoleUpdatedV1
-  
 {
     use GdbotsPbjxEventV1Trait;
 

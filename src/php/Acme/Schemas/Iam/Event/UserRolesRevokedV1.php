@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1 as GdbotsIamUserRolesRevokedV1;
 use Gdbots\Schemas\Iam\Mixin\UserRolesRevoked\UserRolesRevokedV1Mixin as GdbotsIamUserRolesRevokedV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
@@ -16,7 +14,6 @@ final class UserRolesRevokedV1 extends AbstractMessage implements
     UserRolesRevoked,
     GdbotsPbjxEventV1,
     GdbotsIamUserRolesRevokedV1
-  
 {
     use GdbotsPbjxEventV1Trait;
 

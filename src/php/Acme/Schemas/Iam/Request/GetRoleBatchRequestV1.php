@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1 as GdbotsIamGetRoleBatchRequestV1;
 use Gdbots\Schemas\Iam\Mixin\GetRoleBatchRequest\GetRoleBatchRequestV1Mixin as GdbotsIamGetRoleBatchRequestV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\GetNodeBatchRequest\GetNodeBatchRequestV1 as GdbotsNcrGetNodeBatchRequestV1;
@@ -19,7 +17,6 @@ final class GetRoleBatchRequestV1 extends AbstractMessage implements
     GdbotsPbjxRequestV1,
     GdbotsNcrGetNodeBatchRequestV1,
     GdbotsIamGetRoleBatchRequestV1
-  
 {
     use GdbotsPbjxRequestV1Trait;
 

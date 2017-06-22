@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\DeleteRole\DeleteRoleV1 as GdbotsIamDeleteRoleV1;
 use Gdbots\Schemas\Iam\Mixin\DeleteRole\DeleteRoleV1Mixin as GdbotsIamDeleteRoleV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\DeleteNode\DeleteNodeV1 as GdbotsNcrDeleteNodeV1;
@@ -19,7 +17,6 @@ final class DeleteRoleV1 extends AbstractMessage implements
     GdbotsPbjxCommandV1,
     GdbotsNcrDeleteNodeV1,
     GdbotsIamDeleteRoleV1
-  
 {
     use GdbotsPbjxCommandV1Trait;
 

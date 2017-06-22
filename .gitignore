@@ -1,3 +1,8 @@
+# Node Files #
+############
+/node_modules/
+/dist/
+
 # Deployment/IDE Tools #
 ############
 autoload.php

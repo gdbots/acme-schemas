@@ -10,6 +10,23 @@
           <classname>Acme\Schemas\Iam\UserId</classname>
           <default>function() { return UserId::generate(); }</default>
         </php-options>
+        <js-options>
+          <classname>acme/iam/UserId</classname>
+          <default>() => UserId.generate()</default>
+        </js-options>
+      </field>
+
+      <field name="test_any_of1" type="message">
+        <any-of>
+          <curie>gdbots:contexts::app</curie>
+        </any-of>
+      </field>
+
+      <field name="test_any_of2" type="message">
+        <any-of>
+          <curie>gdbots:contexts::app</curie>
+          <curie>gdbots:contexts::cloud</curie>
+        </any-of>
       </field>
     </fields>
 
@@ -23,5 +40,22 @@
     <php-options>
       <namespace>Acme\Schemas\Iam\Node</namespace>
     </php-options>
+    <js-options>
+      <namespace>acme/iam/node</namespace>
+      <insertion-points>
+        <imports/>
+        <methods>
+          <![CDATA[
+/**
+ * @returns {Object}
+ */
+getUriTemplateVars()
+{
+  return {user_id: `${this.get('_id')}` };
+}
+            ]]>
+        </methods>
+      </insertion-points>
+    </js-options>
   </schema>
 </pbj-schema>

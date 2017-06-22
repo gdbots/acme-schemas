@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\GetUserHistoryRequest\GetUserHistoryRequestV1 as GdbotsIamGetUserHistoryRequestV1;
 use Gdbots\Schemas\Iam\Mixin\GetUserHistoryRequest\GetUserHistoryRequestV1Mixin as GdbotsIamGetUserHistoryRequestV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\GetEventsRequest\GetEventsRequestV1 as GdbotsPbjxGetEventsRequestV1;
@@ -19,7 +17,6 @@ final class GetUserHistoryRequestV1 extends AbstractMessage implements
     GdbotsPbjxRequestV1,
     GdbotsPbjxGetEventsRequestV1,
     GdbotsIamGetUserHistoryRequestV1
-  
 {
     use GdbotsPbjxRequestV1Trait;
 

@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\RoleDeleted\RoleDeletedV1 as GdbotsIamRoleDeletedV1;
 use Gdbots\Schemas\Iam\Mixin\RoleDeleted\RoleDeletedV1Mixin as GdbotsIamRoleDeletedV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\NodeDeleted\NodeDeletedV1 as GdbotsNcrNodeDeletedV1;
@@ -19,7 +17,6 @@ final class RoleDeletedV1 extends AbstractMessage implements
     GdbotsPbjxEventV1,
     GdbotsNcrNodeDeletedV1,
     GdbotsIamRoleDeletedV1
-  
 {
     use GdbotsPbjxEventV1Trait;
 

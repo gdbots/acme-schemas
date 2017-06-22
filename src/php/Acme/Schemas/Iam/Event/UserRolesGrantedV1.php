@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1 as GdbotsIamUserRolesGrantedV1;
 use Gdbots\Schemas\Iam\Mixin\UserRolesGranted\UserRolesGrantedV1Mixin as GdbotsIamUserRolesGrantedV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Event\EventV1 as GdbotsPbjxEventV1;
@@ -16,7 +14,6 @@ final class UserRolesGrantedV1 extends AbstractMessage implements
     UserRolesGranted,
     GdbotsPbjxEventV1,
     GdbotsIamUserRolesGrantedV1
-  
 {
     use GdbotsPbjxEventV1Trait;
 

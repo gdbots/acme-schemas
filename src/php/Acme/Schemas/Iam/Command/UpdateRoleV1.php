@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\UpdateRole\UpdateRoleV1 as GdbotsIamUpdateRoleV1;
 use Gdbots\Schemas\Iam\Mixin\UpdateRole\UpdateRoleV1Mixin as GdbotsIamUpdateRoleV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\UpdateNode\UpdateNodeV1 as GdbotsNcrUpdateNodeV1;
@@ -19,7 +17,6 @@ final class UpdateRoleV1 extends AbstractMessage implements
     GdbotsPbjxCommandV1,
     GdbotsNcrUpdateNodeV1,
     GdbotsIamUpdateRoleV1
-  
 {
     use GdbotsPbjxCommandV1Trait;
 

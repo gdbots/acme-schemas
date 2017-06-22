@@ -3,9 +3,7 @@
 namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
-use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1 as GdbotsIamCreateUserV1;
 use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1Mixin as GdbotsIamCreateUserV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1 as GdbotsNcrCreateNodeV1;
@@ -19,7 +17,6 @@ final class CreateUserV1 extends AbstractMessage implements
     GdbotsPbjxCommandV1,
     GdbotsNcrCreateNodeV1,
     GdbotsIamCreateUserV1
-  
 {
     use GdbotsPbjxCommandV1Trait;
 
