@@ -1,5 +1,5 @@
 <?php
-//test
+
 namespace Acme\Schemas\Iam\Node;
 
 use Acme\Schemas\Iam\UserId;
@@ -39,12 +39,21 @@ final class UserV1 extends AbstractMessage implements
                     ->required()
                     ->withDefault(function() { return UserId::generate(); })
                     ->className(UserId::class)
+                    ->build(),
+                Fb::create('test_any_of1', T\MessageType::create())
+                    ->className(App::class)
+                    ->build(),
+                Fb::create('test_any_of2', T\MessageType::create())
+                    ->anyOfClassNames([
+                      App::class, 
+                      Cloud::class
+                    ])
                     ->build()
             ],
             [
-                GdbotsNcrNodeV1Mixin::create(),
-                GdbotsIamUserV1Mixin::create(),
-                GdbotsNcrIndexedV1Mixin::create(),
+                GdbotsNcrNodeV1Mixin::create(), 
+                GdbotsIamUserV1Mixin::create(), 
+                GdbotsNcrIndexedV1Mixin::create(), 
                 GdbotsCommonTaggableV1Mixin::create()
             ]
         );
