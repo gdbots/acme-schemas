@@ -18,5 +18,5 @@ engines:
 
 ratings:
   paths:
-    - '**.js'
-    - '**.php'
+    - 'build/**.js'
+    - 'build/**.php'

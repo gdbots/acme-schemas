@@ -32,7 +32,7 @@
       ],
       "plugins": [
         "lodash",
-        "./build/use-lodash-es"
+        "./build/js/use-lodash-es"
       ]
     }
   }

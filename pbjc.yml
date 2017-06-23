@@ -6,13 +6,13 @@ namespaces:
 languages:
   php:
     include_all: true
-    output: ./src/php
-    manifest: ./pbj-schemas.php
+    output: ./build/php/src
+    manifest: ./build/php/src/pbj-schemas.php
 
   js:
     include_all: true
-    output: ./src/js
-    manifest: ./pbj-schemas.js
+    output: ./build/js/src
+    manifest: ./build/js/src/pbj-schemas.js
 
   json-schema:
     include_all: true

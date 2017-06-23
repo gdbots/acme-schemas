@@ -39,6 +39,10 @@
 
     <php-options>
       <namespace>Acme\Schemas\Iam\Node</namespace>
+      <insertion-points>
+        <imports>//imports</imports>
+        <methods>//methods</methods>
+      </insertion-points>
     </php-options>
     <js-options>
       <namespace>acme/iam/node</namespace>
