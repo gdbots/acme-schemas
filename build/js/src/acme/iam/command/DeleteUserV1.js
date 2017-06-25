@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import CommandV1Mixin from '/command-v1-mixin';
-import DeleteNodeV1Mixin from '/delete-node-v1-mixin';
-import DeleteUserV1Mixin from '/delete-user-v1-mixin';
+import GdbotsIamDeleteUserV1Mixin from '//DeleteUserV1Mixin';
+import GdbotsNcrDeleteNodeV1Mixin from '//DeleteNodeV1Mixin';
+import GdbotsPbjxCommandV1Mixin from '//CommandV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class DeleteUserV1 extends Message {
@@ -14,9 +14,9 @@ export default class DeleteUserV1 extends Message {
     return new Schema('pbj:acme:iam:command:delete-user:1-0-0', this.name,
       [],
       [
-        CommandV1Mixin.create(), 
-        DeleteNodeV1Mixin.create(), 
-        DeleteUserV1Mixin.create()
+        GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsNcrDeleteNodeV1Mixin.create(),
+        GdbotsIamDeleteUserV1Mixin.create(),
       ]
     );
   }

@@ -12,5 +12,10 @@
     <php-options>
       <namespace>Acme\Schemas\Iam\Node</namespace>
     </php-options>
+
+    <js-options>
+      <package>@gdbots/acme-schemas</package>
+      <directory>acme/iam/node</directory>
+    </js-options>
   </schema>
 </pbj-schema>

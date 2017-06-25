@@ -11,7 +11,7 @@
           <default>function() { return UserId::generate(); }</default>
         </php-options>
         <js-options>
-          <classname>acme/iam/UserId</classname>
+          <!--<classname>acme/iam/UserId</classname>-->
           <default>() => UserId.generate()</default>
         </js-options>
       </field>
@@ -39,23 +39,24 @@
 
     <php-options>
       <namespace>Acme\Schemas\Iam\Node</namespace>
-      <insertion-points>
-        <imports>//imports</imports>
-        <methods>//methods</methods>
-      </insertion-points>
     </php-options>
+
     <js-options>
-      <namespace>acme/iam/node</namespace>
+      <package>@gdbots/acme-schemas</package>
+      <directory>acme/iam/node</directory>
       <insertion-points>
-        <imports/>
+        <imports>
+          <![CDATA[
+import MessageRef from '@gdbots/pbj/MessageRef';
+          ]]>
+        </imports>
         <methods>
           <![CDATA[
 /**
  * @returns {Object}
  */
-getUriTemplateVars()
-{
-  return {user_id: `${this.get('_id')}` };
+getUriTemplateVars() {
+  return { user_id: `${this.get('_id')}` };
 }
             ]]>
         </methods>

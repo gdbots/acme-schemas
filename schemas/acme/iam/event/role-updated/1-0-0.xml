@@ -13,5 +13,10 @@
     <php-options>
       <namespace>Acme\Schemas\Iam\Event</namespace>
     </php-options>
+
+    <js-options>
+      <package>@gdbots/acme-schemas</package>
+      <directory>acme/iam/event</directory>
+    </js-options>
   </schema>
 </pbj-schema>

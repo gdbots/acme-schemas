@@ -13,13 +13,10 @@
     <php-options>
       <namespace>Acme\Schemas\Iam\Command</namespace>
     </php-options>
+
     <js-options>
-      <namespace>acme/iam/command</namespace>
+      <package>@gdbots/acme-schemas</package>
+      <directory>acme/iam/command</directory>
     </js-options>
   </schema>
 </pbj-schema>
-
-<!--
-import CreateRoleV1 from '@acme/schemas/acme/iam/command/CreateRoleV1';
-import UserV1 from '@tmz/schemas/Tmz/Iam/Node/UserV1';
--->

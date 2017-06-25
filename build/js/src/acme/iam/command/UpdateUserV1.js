@@ -1,8 +1,8 @@
 import Message from '@gdbots/pbj/Message';
-import CommandV1Mixin from '/command-v1-mixin';
+import GdbotsIamUpdateUserV1Mixin from '//UpdateUserV1Mixin';
+import GdbotsNcrUpdateNodeV1Mixin from '//UpdateNodeV1Mixin';
+import GdbotsPbjxCommandV1Mixin from '//CommandV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
-import UpdateNodeV1Mixin from '/update-node-v1-mixin';
-import UpdateUserV1Mixin from '/update-user-v1-mixin';
 
 export default class UpdateUserV1 extends Message {
   /**
@@ -14,9 +14,9 @@ export default class UpdateUserV1 extends Message {
     return new Schema('pbj:acme:iam:command:update-user:1-0-0', this.name,
       [],
       [
-        CommandV1Mixin.create(), 
-        UpdateNodeV1Mixin.create(), 
-        UpdateUserV1Mixin.create()
+        GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsNcrUpdateNodeV1Mixin.create(),
+        GdbotsIamUpdateUserV1Mixin.create(),
       ]
     );
   }

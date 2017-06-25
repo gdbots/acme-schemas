@@ -14,7 +14,19 @@
         ]
       ],
       "plugins": [
-        "transform-es2015-modules-commonjs"
+        "transform-es2015-modules-commonjs",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./build/js/src"
+            ],
+            "alias": {
+              "@gdbots/acme-schemas": "./build/js/src",
+              "@gdbots/schemas": "./build/js/src"
+            }
+          }
+        ]
       ]
     },
     "es6": {
@@ -32,7 +44,19 @@
       ],
       "plugins": [
         "lodash",
-        "./build/js/use-lodash-es"
+        "./build/js/use-lodash-es",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./build/js/src"
+            ],
+            "alias": {
+              "@gdbots/acme-schemas": "./build/js/src",
+              "@gdbots/schemas": "./build/js/src"
+            }
+          }
+        ]
       ]
     }
   }

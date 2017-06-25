@@ -17,5 +17,10 @@
   "rules": {
     "jsx-a11y/img-has-alt": "off",
     "react/jsx-space-before-closing": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
   }
 }

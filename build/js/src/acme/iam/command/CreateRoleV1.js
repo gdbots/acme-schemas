@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import CommandV1Mixin from '/command-v1-mixin';
-import CreateNodeV1Mixin from '/create-node-v1-mixin';
-import CreateRoleV1Mixin from '/create-role-v1-mixin';
+import GdbotsIamCreateRoleV1Mixin from '//CreateRoleV1Mixin';
+import GdbotsNcrCreateNodeV1Mixin from '//CreateNodeV1Mixin';
+import GdbotsPbjxCommandV1Mixin from '//CommandV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class CreateRoleV1 extends Message {
@@ -14,9 +14,9 @@ export default class CreateRoleV1 extends Message {
     return new Schema('pbj:acme:iam:command:create-role:1-0-0', this.name,
       [],
       [
-        CommandV1Mixin.create(), 
-        CreateNodeV1Mixin.create(), 
-        CreateRoleV1Mixin.create()
+        GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsNcrCreateNodeV1Mixin.create(),
+        GdbotsIamCreateRoleV1Mixin.create(),
       ]
     );
   }

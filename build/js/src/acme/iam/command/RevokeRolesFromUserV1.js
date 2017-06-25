@@ -1,6 +1,6 @@
 import Message from '@gdbots/pbj/Message';
-import CommandV1Mixin from '/command-v1-mixin';
-import RevokeRolesFromUserV1Mixin from '/revoke-roles-from-user-v1-mixin';
+import GdbotsIamRevokeRolesFromUserV1Mixin from '//RevokeRolesFromUserV1Mixin';
+import GdbotsPbjxCommandV1Mixin from '//CommandV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class RevokeRolesFromUserV1 extends Message {
@@ -13,8 +13,8 @@ export default class RevokeRolesFromUserV1 extends Message {
     return new Schema('pbj:acme:iam:command:revoke-roles-from-user:1-0-0', this.name,
       [],
       [
-        CommandV1Mixin.create(), 
-        RevokeRolesFromUserV1Mixin.create()
+        GdbotsPbjxCommandV1Mixin.create(),
+        GdbotsIamRevokeRolesFromUserV1Mixin.create(),
       ]
     );
   }

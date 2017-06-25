@@ -19,7 +19,6 @@ use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1Mixin as GdbotsNcrIndexedV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1 as GdbotsNcrNodeV1;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
-//imports
 
 final class UserV1 extends AbstractMessage implements
     User,
@@ -63,6 +62,4 @@ final class UserV1 extends AbstractMessage implements
             ]
         );
     }
-
-    //methods
 }
