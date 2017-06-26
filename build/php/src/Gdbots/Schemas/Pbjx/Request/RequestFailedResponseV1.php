@@ -35,10 +35,10 @@ final class RequestFailedResponseV1 extends AbstractMessage implements
                 Fb::create('prev_error_message', T\TextType::create())
                     ->build(),
                 Fb::create('stack_trace', T\TextType::create())
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
             ]
         );
     }

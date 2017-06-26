@@ -31,7 +31,7 @@ final class UaParserV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsContextsUserAgent::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

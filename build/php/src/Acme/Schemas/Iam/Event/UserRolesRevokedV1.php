@@ -25,8 +25,8 @@ final class UserRolesRevokedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-roles-revoked:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsIamUserRolesRevokedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsIamUserRolesRevokedV1Mixin::create(),
             ]
         );
     }

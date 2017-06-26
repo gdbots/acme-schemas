@@ -26,7 +26,7 @@ final class GetUserRequestV1Mixin extends AbstractMixin
         return [
             Fb::create('email', T\StringType::create())
                 ->format(Format::EMAIL())
-                ->build()
+                ->build(),
         ];
     }
 }

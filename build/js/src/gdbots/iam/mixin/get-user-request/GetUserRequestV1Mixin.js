@@ -19,7 +19,7 @@ export default class GetUserRequestV1Mixin extends Mixin {
     return [
       Fb.create('email', T.StringType.create())
         .format(Format.EMAIL)
-        .build()
+        .build(),
     ];
   }
 }

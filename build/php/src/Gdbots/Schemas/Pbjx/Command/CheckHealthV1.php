@@ -28,10 +28,10 @@ final class CheckHealthV1 extends AbstractMessage implements
                  * the event "health-checked" is triggered. (ping-pong)
                  */
                 Fb::create('msg', T\StringType::create())
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxCommandV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
             ]
         );
     }

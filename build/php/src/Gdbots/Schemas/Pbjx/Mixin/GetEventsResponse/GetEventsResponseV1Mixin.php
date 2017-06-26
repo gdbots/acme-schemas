@@ -39,7 +39,7 @@ final class GetEventsResponseV1Mixin extends AbstractMixin
                     GdbotsPbjxEvent::class,
                 ])
                 ->overridable(true)
-                ->build()
+                ->build(),
         ];
     }
 }

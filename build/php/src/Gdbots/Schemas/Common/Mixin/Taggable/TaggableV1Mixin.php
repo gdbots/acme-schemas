@@ -31,7 +31,7 @@ final class TaggableV1Mixin extends AbstractMixin
             Fb::create('tags', T\StringType::create())
                 ->asAMap()
                 ->pattern('^[\w\/\.:-]+$')
-                ->build()
+                ->build(),
         ];
     }
 }

@@ -9,7 +9,7 @@ export default class AddressV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:geo::address:1-0-1', this.name,
+    return new Schema('pbj:gdbots:geo::address:1-0-1', AddressV1,
       [
         Fb.create('geo_hash', T.StringType.create())
           .maxLength(20)
@@ -60,8 +60,9 @@ export default class AddressV1 extends Message {
           .pattern('^[A-Z]{2}$')
           .build(),
         Fb.create('continent', T.StringType.create())
-          .build()
+          .build(),
       ]
     );
   }
 }
+

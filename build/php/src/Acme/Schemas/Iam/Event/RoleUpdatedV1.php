@@ -28,9 +28,9 @@ final class RoleUpdatedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:role-updated:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsNcrNodeUpdatedV1Mixin::create(), 
-                GdbotsIamRoleUpdatedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsNcrNodeUpdatedV1Mixin::create(),
+                GdbotsIamRoleUpdatedV1Mixin::create(),
             ]
         );
     }

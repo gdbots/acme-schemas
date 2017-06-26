@@ -38,7 +38,7 @@ final class GetNodeBatchRequestV1Mixin extends AbstractMixin
             Fb::create('node_refs', T\IdentifierType::create())
                 ->asASet()
                 ->className(NodeRef::class)
-                ->build()
+                ->build(),
         ];
     }
 }

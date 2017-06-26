@@ -28,9 +28,9 @@ final class CreateUserV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:create-user:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsNcrCreateNodeV1Mixin::create(), 
-                GdbotsIamCreateUserV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsNcrCreateNodeV1Mixin::create(),
+                GdbotsIamCreateUserV1Mixin::create(),
             ]
         );
     }

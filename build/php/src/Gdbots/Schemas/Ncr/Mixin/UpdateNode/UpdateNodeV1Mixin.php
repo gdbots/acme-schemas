@@ -44,7 +44,7 @@ final class UpdateNodeV1Mixin extends AbstractMixin
                     GdbotsNcrNode::class,
                 ])
                 ->overridable(true)
-                ->build()
+                ->build(),
         ];
     }
 }

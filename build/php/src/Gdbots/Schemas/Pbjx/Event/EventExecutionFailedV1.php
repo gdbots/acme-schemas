@@ -44,11 +44,11 @@ final class EventExecutionFailedV1 extends AbstractMessage implements
                 Fb::create('prev_error_message', T\TextType::create())
                     ->build(),
                 Fb::create('stack_trace', T\TextType::create())
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsPbjxIndexedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsPbjxIndexedV1Mixin::create(),
             ]
         );
     }

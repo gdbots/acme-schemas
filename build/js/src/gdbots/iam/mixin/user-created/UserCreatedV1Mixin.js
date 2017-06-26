@@ -21,7 +21,7 @@ export default class UserCreatedV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:iam:mixin:user',
         ])
-        .build()
+        .build(),
     ];
   }
 }

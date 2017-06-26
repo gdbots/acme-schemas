@@ -24,7 +24,7 @@ export default class SearchUsersRequestV1Mixin extends Mixin {
         .build(),
       Fb.create('is_blocked', T.TrinaryType.create())
         .withDefault(2)
-        .build()
+        .build(),
     ];
   }
 }

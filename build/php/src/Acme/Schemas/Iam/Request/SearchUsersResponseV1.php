@@ -28,9 +28,9 @@ final class SearchUsersResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:search-users-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsNcrSearchNodesResponseV1Mixin::create(), 
-                GdbotsIamSearchUsersResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsNcrSearchNodesResponseV1Mixin::create(),
+                GdbotsIamSearchUsersResponseV1Mixin::create(),
             ]
         );
     }

@@ -52,13 +52,13 @@ final class UserV1 extends AbstractMessage implements
                         GdbotsContextsApp::class,
                         GdbotsContextsCloud::class,
                     ])
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsNcrNodeV1Mixin::create(), 
-                GdbotsIamUserV1Mixin::create(), 
-                GdbotsNcrIndexedV1Mixin::create(), 
-                GdbotsCommonTaggableV1Mixin::create()
+                GdbotsNcrNodeV1Mixin::create(),
+                GdbotsIamUserV1Mixin::create(),
+                GdbotsNcrIndexedV1Mixin::create(),
+                GdbotsCommonTaggableV1Mixin::create(),
             ]
         );
     }

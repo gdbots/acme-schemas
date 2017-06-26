@@ -44,7 +44,7 @@ final class GetEventsRequestV1Mixin extends AbstractMixin
              * When true, the events are read from oldest to newest, otherwise newest to oldest.
              */
             Fb::create('forward', T\BooleanType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

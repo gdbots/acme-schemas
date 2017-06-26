@@ -29,7 +29,7 @@ final class SearchUsersResponseV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsIamUser::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

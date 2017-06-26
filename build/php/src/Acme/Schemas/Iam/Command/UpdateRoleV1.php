@@ -28,9 +28,9 @@ final class UpdateRoleV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:update-role:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsNcrUpdateNodeV1Mixin::create(), 
-                GdbotsIamUpdateRoleV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsNcrUpdateNodeV1Mixin::create(),
+                GdbotsIamUpdateRoleV1Mixin::create(),
             ]
         );
     }

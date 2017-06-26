@@ -28,9 +28,9 @@ final class DeleteUserV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:delete-user:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsNcrDeleteNodeV1Mixin::create(), 
-                GdbotsIamDeleteUserV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsNcrDeleteNodeV1Mixin::create(),
+                GdbotsIamDeleteUserV1Mixin::create(),
             ]
         );
     }

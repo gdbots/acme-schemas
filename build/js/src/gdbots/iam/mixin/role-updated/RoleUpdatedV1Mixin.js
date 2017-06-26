@@ -29,7 +29,7 @@ export default class RoleUpdatedV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:iam:mixin:role',
         ])
-        .build()
+        .build(),
     ];
   }
 }

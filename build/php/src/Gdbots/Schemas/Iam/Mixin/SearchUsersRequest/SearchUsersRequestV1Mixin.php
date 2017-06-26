@@ -32,7 +32,7 @@ final class SearchUsersRequestV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('is_blocked', T\TrinaryType::create())
                 ->withDefault(2)
-                ->build()
+                ->build(),
         ];
     }
 }

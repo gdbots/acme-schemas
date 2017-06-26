@@ -28,9 +28,9 @@ final class GetRoleResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-role-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsNcrGetNodeResponseV1Mixin::create(), 
-                GdbotsIamGetRoleResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsNcrGetNodeResponseV1Mixin::create(),
+                GdbotsIamGetRoleResponseV1Mixin::create(),
             ]
         );
     }

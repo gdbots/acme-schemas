@@ -33,7 +33,7 @@ final class SluggableV1Mixin extends AbstractMixin
              */
             Fb::create('slug', T\StringType::create())
                 ->format(Format::SLUG())
-                ->build()
+                ->build(),
         ];
     }
 }

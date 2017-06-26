@@ -37,7 +37,7 @@ export default class RoleV1Mixin extends Mixin {
       Fb.create('denied', T.StringType.create())
         .asASet()
         .pattern('^[a-z0-9_\\*\\.:-]+$')
-        .build()
+        .build(),
     ];
   }
 }

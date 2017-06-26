@@ -24,7 +24,7 @@ export default class NodePublishedV1Mixin extends Mixin {
         .format(Format.SLUG)
         .build(),
       Fb.create('published_at', T.DateTimeType.create())
-        .build()
+        .build(),
     ];
   }
 }

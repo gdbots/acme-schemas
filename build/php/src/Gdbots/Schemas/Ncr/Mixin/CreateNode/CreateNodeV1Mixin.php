@@ -30,7 +30,7 @@ final class CreateNodeV1Mixin extends AbstractMixin
                     GdbotsNcrNode::class,
                 ])
                 ->overridable(true)
-                ->build()
+                ->build(),
         ];
     }
 }

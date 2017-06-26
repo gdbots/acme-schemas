@@ -25,8 +25,8 @@ final class RevokeRolesFromUserV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:revoke-roles-from-user:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsIamRevokeRolesFromUserV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsIamRevokeRolesFromUserV1Mixin::create(),
             ]
         );
     }

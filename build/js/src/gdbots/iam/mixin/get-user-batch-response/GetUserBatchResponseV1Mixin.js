@@ -21,7 +21,7 @@ export default class GetUserBatchResponseV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:iam:mixin:user',
         ])
-        .build()
+        .build(),
     ];
   }
 }

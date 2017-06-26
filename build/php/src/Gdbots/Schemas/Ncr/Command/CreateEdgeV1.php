@@ -29,10 +29,10 @@ final class CreateEdgeV1 extends AbstractMessage implements
                     ->anyOfClassNames([
                         GdbotsNcrEdge::class,
                     ])
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxCommandV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
             ]
         );
     }

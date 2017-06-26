@@ -21,7 +21,7 @@ export default class TimeSamplingV1Mixin extends Mixin {
       Fb.create('ts_ymd', T.IntType.create())
         .build(),
       Fb.create('ts_ym', T.MediumIntType.create())
-        .build()
+        .build(),
     ];
   }
 }

@@ -29,10 +29,10 @@ final class EdgeDeletedV1 extends AbstractMessage implements
                     ->anyOfClassNames([
                         GdbotsNcrEdge::class,
                     ])
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxEventV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
             ]
         );
     }

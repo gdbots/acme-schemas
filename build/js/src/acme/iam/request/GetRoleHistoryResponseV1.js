@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsIamGetRoleHistoryResponseV1Mixin from '//GetRoleHistoryResponseV1Mixin';
-import GdbotsPbjxGetEventsResponseV1Mixin from '//GetEventsResponseV1Mixin';
-import GdbotsPbjxResponseV1Mixin from '//ResponseV1Mixin';
+import GdbotsIamGetRoleHistoryResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-role-history-response/GetRoleHistoryResponseV1Mixin';
+import GdbotsPbjxGetEventsResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-response/GetEventsResponseV1Mixin';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetRoleHistoryResponseV1 extends Message {
@@ -11,7 +11,7 @@ export default class GetRoleHistoryResponseV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:acme:iam:request:get-role-history-response:1-0-0', this.name,
+    return new Schema('pbj:acme:iam:request:get-role-history-response:1-0-0', GetRoleHistoryResponseV1,
       [],
       [
         GdbotsPbjxResponseV1Mixin.create(),
@@ -21,3 +21,4 @@ export default class GetRoleHistoryResponseV1 extends Message {
     );
   }
 }
+

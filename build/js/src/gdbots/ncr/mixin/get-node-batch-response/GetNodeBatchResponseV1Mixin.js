@@ -29,7 +29,7 @@ export default class GetNodeBatchResponseV1Mixin extends Mixin {
        */
       Fb.create('missing_node_refs', T.IdentifierType.create())
         .asASet()
-        .build()
+        .build(),
     ];
   }
 }

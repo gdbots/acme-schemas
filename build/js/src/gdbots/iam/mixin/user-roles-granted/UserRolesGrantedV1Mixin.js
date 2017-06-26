@@ -24,7 +24,7 @@ export default class UserRolesGrantedV1Mixin extends Mixin {
        */
       Fb.create('roles', T.IdentifierType.create())
         .asASet()
-        .build()
+        .build(),
     ];
   }
 }

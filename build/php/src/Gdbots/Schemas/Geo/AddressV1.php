@@ -67,7 +67,7 @@ final class AddressV1 extends AbstractMessage implements
                     ->pattern('^[A-Z]{2}$')
                     ->build(),
                 Fb::create('continent', T\StringType::create())
-                    ->build()
+                    ->build(),
             ]
         );
     }

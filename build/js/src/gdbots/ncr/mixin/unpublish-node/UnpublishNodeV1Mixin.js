@@ -18,7 +18,7 @@ export default class UnpublishNodeV1Mixin extends Mixin {
     return [
       Fb.create('node_ref', T.IdentifierType.create())
         .required()
-        .build()
+        .build(),
     ];
   }
 }

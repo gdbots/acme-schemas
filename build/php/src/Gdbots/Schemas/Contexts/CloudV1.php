@@ -38,7 +38,7 @@ final class CloudV1 extends AbstractMessage implements
                 Fb::create('instance_type', T\StringType::create())
                     ->maxLength(20)
                     ->pattern('^[\w\.-]+$')
-                    ->build()
+                    ->build(),
             ]
         );
     }

@@ -24,7 +24,7 @@ final class TrackerV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('is_enabled', T\BooleanType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

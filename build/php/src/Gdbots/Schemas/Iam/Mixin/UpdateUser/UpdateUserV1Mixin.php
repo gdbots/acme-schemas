@@ -37,7 +37,7 @@ final class UpdateUserV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsIamUser::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

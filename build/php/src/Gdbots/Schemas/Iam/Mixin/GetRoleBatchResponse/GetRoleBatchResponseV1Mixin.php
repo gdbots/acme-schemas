@@ -29,7 +29,7 @@ final class GetRoleBatchResponseV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsIamRole::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

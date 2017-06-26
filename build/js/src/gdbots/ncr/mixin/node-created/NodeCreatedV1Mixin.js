@@ -22,7 +22,7 @@ export default class NodeCreatedV1Mixin extends Mixin {
           'gdbots:ncr:mixin:node',
         ])
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

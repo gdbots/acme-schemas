@@ -69,7 +69,7 @@ export default class CommandV1Mixin extends Mixin {
         .build(),
       Fb.create('ctx_ua', T.TextType.create())
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

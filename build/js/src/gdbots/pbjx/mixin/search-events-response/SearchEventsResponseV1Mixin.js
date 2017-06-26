@@ -39,7 +39,7 @@ export default class SearchEventsResponseV1Mixin extends Mixin {
           'gdbots:pbjx:mixin:event',
         ])
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

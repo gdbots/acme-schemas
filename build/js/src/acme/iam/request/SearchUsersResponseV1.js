@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsIamSearchUsersResponseV1Mixin from '//SearchUsersResponseV1Mixin';
-import GdbotsNcrSearchNodesResponseV1Mixin from '//SearchNodesResponseV1Mixin';
-import GdbotsPbjxResponseV1Mixin from '//ResponseV1Mixin';
+import GdbotsIamSearchUsersResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/search-users-response/SearchUsersResponseV1Mixin';
+import GdbotsNcrSearchNodesResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/search-nodes-response/SearchNodesResponseV1Mixin';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class SearchUsersResponseV1 extends Message {
@@ -11,7 +11,7 @@ export default class SearchUsersResponseV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:acme:iam:request:search-users-response:1-0-0', this.name,
+    return new Schema('pbj:acme:iam:request:search-users-response:1-0-0', SearchUsersResponseV1,
       [],
       [
         GdbotsPbjxResponseV1Mixin.create(),
@@ -21,3 +21,4 @@ export default class SearchUsersResponseV1 extends Message {
     );
   }
 }
+

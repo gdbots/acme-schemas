@@ -9,7 +9,7 @@ export default class UserAgentV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:contexts::user-agent:1-0-0', this.name,
+    return new Schema('pbj:gdbots:contexts::user-agent:1-0-0', UserAgentV1,
       [
         Fb.create('br_family', T.StringType.create())
           .pattern('.+')
@@ -33,8 +33,9 @@ export default class UserAgentV1 extends Message {
           .build(),
         Fb.create('dvce_family', T.StringType.create())
           .pattern('.+')
-          .build()
+          .build(),
       ]
     );
   }
 }
+

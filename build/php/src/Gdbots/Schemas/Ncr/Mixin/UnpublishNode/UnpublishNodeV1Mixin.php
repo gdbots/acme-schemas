@@ -27,7 +27,7 @@ final class UnpublishNodeV1Mixin extends AbstractMixin
             Fb::create('node_ref', T\IdentifierType::create())
                 ->required()
                 ->className(NodeRef::class)
-                ->build()
+                ->build(),
         ];
     }
 }

@@ -17,7 +17,7 @@ export default class PublishableV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('published_at', T.DateTimeType.create())
-        .build()
+        .build(),
     ];
   }
 }

@@ -24,7 +24,7 @@ final class PublishableV1Mixin extends AbstractMixin
     {
         return [
             Fb::create('published_at', T\DateTimeType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

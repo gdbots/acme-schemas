@@ -33,7 +33,7 @@ final class IpToGeoV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsGeoAddress::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

@@ -47,7 +47,7 @@ export default class SearchNodesRequestV1Mixin extends Mixin {
         .pattern('^[\\w\\.-]+$')
         .build(),
       Fb.create('parsed_query_json', T.TextType.create())
-        .build()
+        .build(),
     ];
   }
 }

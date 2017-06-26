@@ -28,10 +28,10 @@ final class HealthCheckedV1 extends AbstractMessage implements
                  * is later validated by whatever process initiated the health check.
                  */
                 Fb::create('msg', T\StringType::create())
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxEventV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
             ]
         );
     }

@@ -28,7 +28,7 @@ export default class EdgeV1Mixin extends Mixin {
         .overridable(true)
         .build(),
       Fb.create('created_at', T.MicrotimeType.create())
-        .build()
+        .build(),
     ];
   }
 }

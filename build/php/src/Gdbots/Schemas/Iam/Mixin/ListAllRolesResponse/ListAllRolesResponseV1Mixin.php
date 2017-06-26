@@ -27,7 +27,7 @@ final class ListAllRolesResponseV1Mixin extends AbstractMixin
             Fb::create('roles', T\IdentifierType::create())
                 ->asASet()
                 ->className(NodeRef::class)
-                ->build()
+                ->build(),
         ];
     }
 }

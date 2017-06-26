@@ -9,7 +9,7 @@ export default class CloudV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:contexts::cloud:1-0-0', this.name,
+    return new Schema('pbj:gdbots:contexts::cloud:1-0-0', CloudV1,
       [
         Fb.create('provider', T.StringType.create())
           .maxLength(20)
@@ -30,8 +30,9 @@ export default class CloudV1 extends Message {
         Fb.create('instance_type', T.StringType.create())
           .maxLength(20)
           .pattern('^[\\w\\.-]+$')
-          .build()
+          .build(),
       ]
     );
   }
 }
+

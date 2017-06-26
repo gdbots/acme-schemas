@@ -39,7 +39,7 @@ final class EdgeV1Mixin extends AbstractMixin
                 ->overridable(true)
                 ->build(),
             Fb::create('created_at', T\MicrotimeType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

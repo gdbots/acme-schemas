@@ -38,7 +38,7 @@ final class NodeRenamedV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('old_slug', T\StringType::create())
                 ->format(Format::SLUG())
-                ->build()
+                ->build(),
         ];
     }
 }

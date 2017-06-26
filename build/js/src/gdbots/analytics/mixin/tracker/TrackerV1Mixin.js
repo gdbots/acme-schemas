@@ -17,7 +17,7 @@ export default class TrackerV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('is_enabled', T.BooleanType.create())
-        .build()
+        .build(),
     ];
   }
 }

@@ -42,7 +42,7 @@ final class UtmV1Mixin extends AbstractMixin
             Fb::create('utm_campaign', T\StringType::create())
                 ->maxLength(50)
                 ->pattern('^[\w\/\.:-]+$')
-                ->build()
+                ->build(),
         ];
     }
 }

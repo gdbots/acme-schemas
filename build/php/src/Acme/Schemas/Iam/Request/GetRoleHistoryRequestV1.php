@@ -28,9 +28,9 @@ final class GetRoleHistoryRequestV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-role-history-request:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxRequestV1Mixin::create(), 
-                GdbotsPbjxGetEventsRequestV1Mixin::create(), 
-                GdbotsIamGetRoleHistoryRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(),
+                GdbotsPbjxGetEventsRequestV1Mixin::create(),
+                GdbotsIamGetRoleHistoryRequestV1Mixin::create(),
             ]
         );
     }

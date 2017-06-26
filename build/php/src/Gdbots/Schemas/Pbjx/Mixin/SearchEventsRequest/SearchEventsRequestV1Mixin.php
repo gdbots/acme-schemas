@@ -52,7 +52,7 @@ final class SearchEventsRequestV1Mixin extends AbstractMixin
                 ->pattern('^[\w\.-]+$')
                 ->build(),
             Fb::create('parsed_query_json', T\TextType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

@@ -28,9 +28,9 @@ final class GetUserResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-user-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsNcrGetNodeResponseV1Mixin::create(), 
-                GdbotsIamGetUserResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsNcrGetNodeResponseV1Mixin::create(),
+                GdbotsIamGetUserResponseV1Mixin::create(),
             ]
         );
     }

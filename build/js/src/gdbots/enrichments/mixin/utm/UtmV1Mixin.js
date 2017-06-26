@@ -35,7 +35,7 @@ export default class UtmV1Mixin extends Mixin {
       Fb.create('utm_campaign', T.StringType.create())
         .maxLength(50)
         .pattern('^[\\w\\/\\.:-]+$')
-        .build()
+        .build(),
     ];
   }
 }

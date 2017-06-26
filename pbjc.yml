@@ -7,11 +7,17 @@ languages:
   php:
     include_all: true
     output: ./build/php/src
+    packages:
+      acme: 'Acme\Schemas'
+      gdbots: 'Gdbots\Schemas'
     manifest: ./build/php/src/pbj-schemas.php
 
   js:
     include_all: true
     output: ./build/js/src
+    packages:
+      acme: '@gdbots/acme-schemas'
+      gdbots: '@gdbots/schemas'
     manifest: ./build/js/src/pbj-schemas.js
 
   json-schema:

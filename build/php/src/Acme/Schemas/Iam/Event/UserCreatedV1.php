@@ -43,14 +43,14 @@ final class UserCreatedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-created:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsNcrNodeCreatedV1Mixin::create(), 
-                GdbotsIamUserCreatedV1Mixin::create(), 
-                GdbotsAnalyticsTrackedMessageV1Mixin::create(), 
-                GdbotsEnrichmentsIpToGeoV1Mixin::create(), 
-                GdbotsEnrichmentsTimePartingV1Mixin::create(), 
-                GdbotsEnrichmentsTimeSamplingV1Mixin::create(), 
-                GdbotsEnrichmentsUaParserV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsNcrNodeCreatedV1Mixin::create(),
+                GdbotsIamUserCreatedV1Mixin::create(),
+                GdbotsAnalyticsTrackedMessageV1Mixin::create(),
+                GdbotsEnrichmentsIpToGeoV1Mixin::create(),
+                GdbotsEnrichmentsTimePartingV1Mixin::create(),
+                GdbotsEnrichmentsTimeSamplingV1Mixin::create(),
+                GdbotsEnrichmentsUaParserV1Mixin::create(),
             ]
         );
     }

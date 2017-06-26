@@ -1,6 +1,6 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsNcrGetNodeBatchRequestV1Mixin from '//GetNodeBatchRequestV1Mixin';
-import GdbotsPbjxRequestV1Mixin from '//RequestV1Mixin';
+import GdbotsNcrGetNodeBatchRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-request/GetNodeBatchRequestV1Mixin';
+import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -11,7 +11,7 @@ export default class GetNodeBatchRequestV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:ncr:request:get-node-batch-request:1-0-0', this.name,
+    return new Schema('pbj:gdbots:ncr:request:get-node-batch-request:1-0-0', GetNodeBatchRequestV1,
       [
         /*
          * Context is a map of data that helps the NCR decide where to read/write data from.
@@ -20,7 +20,7 @@ export default class GetNodeBatchRequestV1 extends Message {
         Fb.create('context', T.StringType.create())
           .asAMap()
           .pattern('^[\\w\\/\\.:-]+$')
-          .build()
+          .build(),
       ],
       [
         GdbotsPbjxRequestV1Mixin.create(),
@@ -29,3 +29,4 @@ export default class GetNodeBatchRequestV1 extends Message {
     );
   }
 }
+

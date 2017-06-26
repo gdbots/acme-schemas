@@ -66,7 +66,7 @@ final class UserV1Mixin extends AbstractMixin
             Fb::create('roles', T\IdentifierType::create())
                 ->asASet()
                 ->className(NodeRef::class)
-                ->build()
+                ->build(),
         ];
     }
 }

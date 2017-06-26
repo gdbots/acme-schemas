@@ -40,7 +40,7 @@ final class UserAgentV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('dvce_family', T\StringType::create())
                     ->pattern('.+')
-                    ->build()
+                    ->build(),
             ]
         );
     }

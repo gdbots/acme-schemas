@@ -25,8 +25,8 @@ final class GrantRolesToUserV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:grant-roles-to-user:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsIamGrantRolesToUserV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsIamGrantRolesToUserV1Mixin::create(),
             ]
         );
     }

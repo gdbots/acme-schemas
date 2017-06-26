@@ -9,7 +9,7 @@ export default class AppV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:contexts::app:1-0-0', this.name,
+    return new Schema('pbj:gdbots:contexts::app:1-0-0', AppV1,
       [
         Fb.create('_id', T.UuidType.create())
           .useTypeDefault(false)
@@ -33,8 +33,9 @@ export default class AppV1 extends Message {
         Fb.create('variant', T.StringType.create())
           .maxLength(20)
           .pattern('^[\\w\\.-]+$')
-          .build()
+          .build(),
       ]
     );
   }
 }
+

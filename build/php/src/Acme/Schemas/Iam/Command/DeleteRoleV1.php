@@ -28,9 +28,9 @@ final class DeleteRoleV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:command:delete-role:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxCommandV1Mixin::create(), 
-                GdbotsNcrDeleteNodeV1Mixin::create(), 
-                GdbotsIamDeleteRoleV1Mixin::create()
+                GdbotsPbjxCommandV1Mixin::create(),
+                GdbotsNcrDeleteNodeV1Mixin::create(),
+                GdbotsIamDeleteRoleV1Mixin::create(),
             ]
         );
     }

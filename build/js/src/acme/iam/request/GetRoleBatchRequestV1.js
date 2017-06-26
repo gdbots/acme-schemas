@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsIamGetRoleBatchRequestV1Mixin from '//GetRoleBatchRequestV1Mixin';
-import GdbotsNcrGetNodeBatchRequestV1Mixin from '//GetNodeBatchRequestV1Mixin';
-import GdbotsPbjxRequestV1Mixin from '//RequestV1Mixin';
+import GdbotsIamGetRoleBatchRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-role-batch-request/GetRoleBatchRequestV1Mixin';
+import GdbotsNcrGetNodeBatchRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-request/GetNodeBatchRequestV1Mixin';
+import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetRoleBatchRequestV1 extends Message {
@@ -11,7 +11,7 @@ export default class GetRoleBatchRequestV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:acme:iam:request:get-role-batch-request:1-0-0', this.name,
+    return new Schema('pbj:acme:iam:request:get-role-batch-request:1-0-0', GetRoleBatchRequestV1,
       [],
       [
         GdbotsPbjxRequestV1Mixin.create(),
@@ -21,3 +21,4 @@ export default class GetRoleBatchRequestV1 extends Message {
     );
   }
 }
+

@@ -25,8 +25,8 @@ final class ListAllRolesResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:list-all-roles-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsIamListAllRolesResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsIamListAllRolesResponseV1Mixin::create(),
             ]
         );
     }

@@ -43,14 +43,14 @@ final class RoleCreatedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:role-created:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsNcrNodeCreatedV1Mixin::create(), 
-                GdbotsIamRoleCreatedV1Mixin::create(), 
-                GdbotsAnalyticsTrackedMessageV1Mixin::create(), 
-                GdbotsEnrichmentsIpToGeoV1Mixin::create(), 
-                GdbotsEnrichmentsTimePartingV1Mixin::create(), 
-                GdbotsEnrichmentsTimeSamplingV1Mixin::create(), 
-                GdbotsEnrichmentsUaParserV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsNcrNodeCreatedV1Mixin::create(),
+                GdbotsIamRoleCreatedV1Mixin::create(),
+                GdbotsAnalyticsTrackedMessageV1Mixin::create(),
+                GdbotsEnrichmentsIpToGeoV1Mixin::create(),
+                GdbotsEnrichmentsTimePartingV1Mixin::create(),
+                GdbotsEnrichmentsTimeSamplingV1Mixin::create(),
+                GdbotsEnrichmentsUaParserV1Mixin::create(),
             ]
         );
     }

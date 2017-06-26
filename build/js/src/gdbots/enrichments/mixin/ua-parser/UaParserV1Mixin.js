@@ -23,7 +23,7 @@ export default class UaParserV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:contexts::user-agent',
         ])
-        .build()
+        .build(),
     ];
   }
 }

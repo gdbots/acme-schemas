@@ -29,10 +29,10 @@ final class KeenV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('write_key', T\StringType::create())
                     ->pattern('^\w+$')
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsAnalyticsTrackerV1Mixin::create()
+                GdbotsAnalyticsTrackerV1Mixin::create(),
             ]
         );
     }

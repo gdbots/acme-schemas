@@ -37,7 +37,7 @@ final class RoleUpdatedV1Mixin extends AbstractMixin
                 ->anyOfClassNames([
                     GdbotsIamRole::class,
                 ])
-                ->build()
+                ->build(),
         ];
     }
 }

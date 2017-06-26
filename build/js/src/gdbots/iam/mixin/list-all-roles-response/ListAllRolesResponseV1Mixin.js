@@ -18,7 +18,7 @@ export default class ListAllRolesResponseV1Mixin extends Mixin {
     return [
       Fb.create('roles', T.IdentifierType.create())
         .asASet()
-        .build()
+        .build(),
     ];
   }
 }

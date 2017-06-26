@@ -25,8 +25,8 @@ final class UserRolesGrantedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:user-roles-granted:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsIamUserRolesGrantedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsIamUserRolesGrantedV1Mixin::create(),
             ]
         );
     }

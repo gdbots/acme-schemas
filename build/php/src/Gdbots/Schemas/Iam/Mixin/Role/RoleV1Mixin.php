@@ -46,7 +46,7 @@ final class RoleV1Mixin extends AbstractMixin
             Fb::create('denied', T\StringType::create())
                 ->asASet()
                 ->pattern('^[a-z0-9_\*\.:-]+$')
-                ->build()
+                ->build(),
         ];
     }
 }

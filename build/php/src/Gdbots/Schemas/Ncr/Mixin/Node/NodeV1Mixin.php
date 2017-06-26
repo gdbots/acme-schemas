@@ -70,7 +70,7 @@ final class NodeV1Mixin extends AbstractMixin
             Fb::create('last_event_ref', T\MessageRefType::create())
                 ->build(),
             Fb::create('title', T\StringType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

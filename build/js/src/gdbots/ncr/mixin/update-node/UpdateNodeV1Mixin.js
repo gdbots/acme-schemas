@@ -34,7 +34,7 @@ export default class UpdateNodeV1Mixin extends Mixin {
           'gdbots:ncr:mixin:node',
         ])
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

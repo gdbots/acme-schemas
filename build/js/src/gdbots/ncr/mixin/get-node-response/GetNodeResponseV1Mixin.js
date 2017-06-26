@@ -21,7 +21,7 @@ export default class GetNodeResponseV1Mixin extends Mixin {
           'gdbots:ncr:mixin:node',
         ])
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

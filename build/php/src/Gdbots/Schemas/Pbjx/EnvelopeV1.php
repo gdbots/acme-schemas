@@ -47,7 +47,7 @@ final class EnvelopeV1 extends AbstractMessage implements
                     ->build(),
                 Fb::create('message', T\MessageType::create())
                     ->className(Message::class)
-                    ->build()
+                    ->build(),
             ]
         );
     }

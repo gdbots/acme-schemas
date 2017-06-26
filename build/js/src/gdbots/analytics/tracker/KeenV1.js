@@ -1,5 +1,5 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsAnalyticsTrackerV1Mixin from '//TrackerV1Mixin';
+import GdbotsAnalyticsTrackerV1Mixin from '@gdbots/schemas/gdbots/analytics/mixin/tracker/TrackerV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -10,7 +10,7 @@ export default class KeenV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:analytics:tracker:keen:1-0-0', this.name,
+    return new Schema('pbj:gdbots:analytics:tracker:keen:1-0-0', KeenV1,
       [
         Fb.create('project_id', T.StringType.create())
           .pattern('^\\w+$')
@@ -20,7 +20,7 @@ export default class KeenV1 extends Message {
           .build(),
         Fb.create('write_key', T.StringType.create())
           .pattern('^\\w+$')
-          .build()
+          .build(),
       ],
       [
         GdbotsAnalyticsTrackerV1Mixin.create(),
@@ -28,3 +28,4 @@ export default class KeenV1 extends Message {
     );
   }
 }
+

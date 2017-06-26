@@ -22,7 +22,7 @@ export default class NodeUnpublishedV1Mixin extends Mixin {
         .build(),
       Fb.create('slug', T.StringType.create())
         .format(Format.SLUG)
-        .build()
+        .build(),
     ];
   }
 }

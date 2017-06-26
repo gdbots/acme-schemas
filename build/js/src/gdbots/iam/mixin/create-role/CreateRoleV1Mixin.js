@@ -21,7 +21,7 @@ export default class CreateRoleV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:iam:mixin:role',
         ])
-        .build()
+        .build(),
     ];
   }
 }

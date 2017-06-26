@@ -25,7 +25,7 @@ export default class IpToGeoV1Mixin extends Mixin {
         .anyOfCuries([
           'gdbots:geo::address',
         ])
-        .build()
+        .build(),
     ];
   }
 }

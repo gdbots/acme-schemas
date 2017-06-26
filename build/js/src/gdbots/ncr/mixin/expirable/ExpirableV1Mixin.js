@@ -17,7 +17,7 @@ export default class ExpirableV1Mixin extends Mixin {
   getFields() {
     return [
       Fb.create('expires_at', T.DateTimeType.create())
-        .build()
+        .build(),
     ];
   }
 }

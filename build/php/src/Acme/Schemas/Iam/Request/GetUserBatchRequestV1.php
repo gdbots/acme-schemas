@@ -28,9 +28,9 @@ final class GetUserBatchRequestV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-user-batch-request:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxRequestV1Mixin::create(), 
-                GdbotsNcrGetNodeBatchRequestV1Mixin::create(), 
-                GdbotsIamGetUserBatchRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(),
+                GdbotsNcrGetNodeBatchRequestV1Mixin::create(),
+                GdbotsIamGetUserBatchRequestV1Mixin::create(),
             ]
         );
     }

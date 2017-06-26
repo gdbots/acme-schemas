@@ -28,9 +28,9 @@ final class GetUserHistoryResponseV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-user-history-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsPbjxGetEventsResponseV1Mixin::create(), 
-                GdbotsIamGetUserHistoryResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsPbjxGetEventsResponseV1Mixin::create(),
+                GdbotsIamGetUserHistoryResponseV1Mixin::create(),
             ]
         );
     }

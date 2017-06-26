@@ -31,7 +31,7 @@ export default class TimePartingV1Mixin extends Mixin {
         .build(),
       Fb.create('hour_of_day', T.TinyIntType.create())
         .max(23)
-        .build()
+        .build(),
     ];
   }
 }

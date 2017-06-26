@@ -1,5 +1,5 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsPbjxResponseV1Mixin from '//ResponseV1Mixin';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -10,7 +10,7 @@ export default class RequestFailedResponseV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:pbjx:request:request-failed-response:1-0-0', this.name,
+    return new Schema('pbj:gdbots:pbjx:request:request-failed-response:1-0-0', RequestFailedResponseV1,
       [
         Fb.create('error_code', T.SmallIntType.create())
           .withDefault(2)
@@ -23,7 +23,7 @@ export default class RequestFailedResponseV1 extends Message {
         Fb.create('prev_error_message', T.TextType.create())
           .build(),
         Fb.create('stack_trace', T.TextType.create())
-          .build()
+          .build(),
       ],
       [
         GdbotsPbjxResponseV1Mixin.create(),
@@ -31,3 +31,4 @@ export default class RequestFailedResponseV1 extends Message {
     );
   }
 }
+

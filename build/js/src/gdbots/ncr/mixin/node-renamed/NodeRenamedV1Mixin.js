@@ -28,7 +28,7 @@ export default class NodeRenamedV1Mixin extends Mixin {
         .build(),
       Fb.create('old_slug', T.StringType.create())
         .format(Format.SLUG)
-        .build()
+        .build(),
     ];
   }
 }

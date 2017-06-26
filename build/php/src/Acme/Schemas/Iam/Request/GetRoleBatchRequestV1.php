@@ -28,9 +28,9 @@ final class GetRoleBatchRequestV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:request:get-role-batch-request:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxRequestV1Mixin::create(), 
-                GdbotsNcrGetNodeBatchRequestV1Mixin::create(), 
-                GdbotsIamGetRoleBatchRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(),
+                GdbotsNcrGetNodeBatchRequestV1Mixin::create(),
+                GdbotsIamGetRoleBatchRequestV1Mixin::create(),
             ]
         );
     }

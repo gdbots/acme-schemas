@@ -40,7 +40,7 @@ final class TimePartingV1Mixin extends AbstractMixin
                 ->build(),
             Fb::create('hour_of_day', T\TinyIntType::create())
                 ->max(23)
-                ->build()
+                ->build(),
         ];
     }
 }

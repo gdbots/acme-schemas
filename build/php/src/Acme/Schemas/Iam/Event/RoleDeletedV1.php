@@ -28,9 +28,9 @@ final class RoleDeletedV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:event:role-deleted:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxEventV1Mixin::create(), 
-                GdbotsNcrNodeDeletedV1Mixin::create(), 
-                GdbotsIamRoleDeletedV1Mixin::create()
+                GdbotsPbjxEventV1Mixin::create(),
+                GdbotsNcrNodeDeletedV1Mixin::create(),
+                GdbotsIamRoleDeletedV1Mixin::create(),
             ]
         );
     }

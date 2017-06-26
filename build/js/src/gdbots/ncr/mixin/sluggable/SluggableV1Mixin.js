@@ -26,7 +26,7 @@ export default class SluggableV1Mixin extends Mixin {
        */
       Fb.create('slug', T.StringType.create())
         .format(Format.SLUG)
-        .build()
+        .build(),
     ];
   }
 }

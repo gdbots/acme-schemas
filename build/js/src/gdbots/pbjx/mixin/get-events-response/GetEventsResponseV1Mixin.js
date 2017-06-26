@@ -31,7 +31,7 @@ export default class GetEventsResponseV1Mixin extends Mixin {
           'gdbots:pbjx:mixin:event',
         ])
         .overridable(true)
-        .build()
+        .build(),
     ];
   }
 }

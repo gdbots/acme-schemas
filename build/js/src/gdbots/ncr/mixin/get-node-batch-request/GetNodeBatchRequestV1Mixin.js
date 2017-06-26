@@ -29,7 +29,7 @@ export default class GetNodeBatchRequestV1Mixin extends Mixin {
        */
       Fb.create('node_refs', T.IdentifierType.create())
         .asASet()
-        .build()
+        .build(),
     ];
   }
 }

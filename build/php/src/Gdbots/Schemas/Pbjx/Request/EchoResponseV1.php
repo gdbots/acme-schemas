@@ -24,10 +24,10 @@ final class EchoResponseV1 extends AbstractMessage implements
         return new Schema('pbj:gdbots:pbjx:request:echo-response:1-0-0', __CLASS__,
             [
                 Fb::create('msg', T\StringType::create())
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
             ]
         );
     }

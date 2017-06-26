@@ -59,7 +59,7 @@ export default class NodeV1Mixin extends Mixin {
       Fb.create('last_event_ref', T.MessageRefType.create())
         .build(),
       Fb.create('title', T.StringType.create())
-        .build()
+        .build(),
     ];
   }
 }

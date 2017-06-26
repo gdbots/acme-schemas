@@ -44,7 +44,7 @@ final class ResponseV1Mixin extends AbstractMixin
                 ])
                 ->build(),
             Fb::create('ctx_correlator_ref', T\MessageRefType::create())
-                ->build()
+                ->build(),
         ];
     }
 }

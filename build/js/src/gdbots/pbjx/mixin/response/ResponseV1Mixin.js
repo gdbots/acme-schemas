@@ -36,7 +36,7 @@ export default class ResponseV1Mixin extends Mixin {
         ])
         .build(),
       Fb.create('ctx_correlator_ref', T.MessageRefType.create())
-        .build()
+        .build(),
     ];
   }
 }

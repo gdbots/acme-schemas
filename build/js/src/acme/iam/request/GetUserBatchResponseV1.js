@@ -1,7 +1,7 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsIamGetUserBatchResponseV1Mixin from '//GetUserBatchResponseV1Mixin';
-import GdbotsNcrGetNodeBatchResponseV1Mixin from '//GetNodeBatchResponseV1Mixin';
-import GdbotsPbjxResponseV1Mixin from '//ResponseV1Mixin';
+import GdbotsIamGetUserBatchResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-batch-response/GetUserBatchResponseV1Mixin';
+import GdbotsNcrGetNodeBatchResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-response/GetNodeBatchResponseV1Mixin';
+import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetUserBatchResponseV1 extends Message {
@@ -11,7 +11,7 @@ export default class GetUserBatchResponseV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:acme:iam:request:get-user-batch-response:1-0-0', this.name,
+    return new Schema('pbj:acme:iam:request:get-user-batch-response:1-0-0', GetUserBatchResponseV1,
       [],
       [
         GdbotsPbjxResponseV1Mixin.create(),
@@ -21,3 +21,4 @@ export default class GetUserBatchResponseV1 extends Message {
     );
   }
 }
+

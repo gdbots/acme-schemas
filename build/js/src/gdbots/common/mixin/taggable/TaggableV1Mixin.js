@@ -24,7 +24,7 @@ export default class TaggableV1Mixin extends Mixin {
       Fb.create('tags', T.StringType.create())
         .asAMap()
         .pattern('^[\\w\\/\\.:-]+$')
-        .build()
+        .build(),
     ];
   }
 }

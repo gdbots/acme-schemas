@@ -27,8 +27,8 @@ final class RoleV1 extends AbstractMessage implements
         return new Schema('pbj:acme:iam:node:role:1-0-0', __CLASS__,
             [],
             [
-                GdbotsNcrNodeV1Mixin::create(), 
-                GdbotsIamRoleV1Mixin::create()
+                GdbotsNcrNodeV1Mixin::create(),
+                GdbotsIamRoleV1Mixin::create(),
             ]
         );
     }

@@ -2,7 +2,7 @@ import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 import HttpCode from '
-Notice: Array to string conversion in /Users/greg/www/schemas/acme-schemas/vendor/twig/twig/lib/Twig/Environment.php(462) : eval()'d code on line 104
+Notice: Array to string conversion in /Users/greg/www/schemas/acme-schemas/vendor/twig/twig/lib/Twig/Environment.php(462) : eval()'d code on line 100
 Array';
 
 export default class EnvelopeV1 extends Message {
@@ -12,7 +12,7 @@ export default class EnvelopeV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:gdbots:pbjx::envelope:1-0-0', this.name,
+    return new Schema('pbj:gdbots:pbjx::envelope:1-0-0', EnvelopeV1,
       [
         Fb.create('envelope_id', T.UuidType.create())
           .required()
@@ -39,8 +39,9 @@ export default class EnvelopeV1 extends Message {
         Fb.create('message_ref', T.MessageRefType.create())
           .build(),
         Fb.create('message', T.MessageType.create())
-          .build()
+          .build(),
       ]
     );
   }
 }
+

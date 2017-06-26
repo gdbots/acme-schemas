@@ -1,14 +1,13 @@
 import Message from '@gdbots/pbj/Message';
-import GdbotsCommonTaggableV1Mixin from '//TaggableV1Mixin';
-import GdbotsContextsAppV1 from '//AppV1';
-import GdbotsContextsCloudV1 from '//CloudV1';
-import GdbotsIamUserV1Mixin from '//UserV1Mixin';
-import GdbotsNcrIndexedV1Mixin from '//IndexedV1Mixin';
+import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
+import GdbotsIamUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Mixin';
+import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/IndexedV1Mixin';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
-import MessageRef from '@gdbots/pbj/MessageRef';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
+// import MessageRef from '@gdbots/pbj/MessageRef';
+import UserId from '@gdbots/acme-schemas/acme/iam/UserId';
 
 export default class UserV1 extends Message {
   /**
@@ -17,7 +16,7 @@ export default class UserV1 extends Message {
    * @returns {Schema}
    */
   static defineSchema() {
-    return new Schema('pbj:acme:iam:node:user:1-0-0', this.name,
+    return new Schema('pbj:acme:iam:node:user:1-0-0', UserV1,
       [
         Fb.create('_id', T.IdentifierType.create())
           .required()
@@ -33,7 +32,7 @@ export default class UserV1 extends Message {
             'gdbots:contexts::app',
             'gdbots:contexts::cloud',
           ])
-          .build()
+          .build(),
       ],
       [
         GdbotsNcrNodeV1Mixin.create(),
@@ -51,3 +50,5 @@ export default class UserV1 extends Message {
     return { user_id: `${this.get('_id')}` };
   }
 }
+
+GdbotsNcrNodeV1Trait(UserV1);

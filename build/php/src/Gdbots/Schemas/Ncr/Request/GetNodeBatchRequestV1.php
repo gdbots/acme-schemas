@@ -33,11 +33,11 @@ final class GetNodeBatchRequestV1 extends AbstractMessage implements
                 Fb::create('context', T\StringType::create())
                     ->asAMap()
                     ->pattern('^[\w\/\.:-]+$')
-                    ->build()
+                    ->build(),
             ],
             [
-                GdbotsPbjxRequestV1Mixin::create(), 
-                GdbotsNcrGetNodeBatchRequestV1Mixin::create()
+                GdbotsPbjxRequestV1Mixin::create(),
+                GdbotsNcrGetNodeBatchRequestV1Mixin::create(),
             ]
         );
     }

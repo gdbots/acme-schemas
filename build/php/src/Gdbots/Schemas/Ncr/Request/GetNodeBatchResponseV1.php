@@ -25,8 +25,8 @@ final class GetNodeBatchResponseV1 extends AbstractMessage implements
         return new Schema('pbj:gdbots:ncr:request:get-node-batch-response:1-0-0', __CLASS__,
             [],
             [
-                GdbotsPbjxResponseV1Mixin::create(), 
-                GdbotsNcrGetNodeBatchResponseV1Mixin::create()
+                GdbotsPbjxResponseV1Mixin::create(),
+                GdbotsNcrGetNodeBatchResponseV1Mixin::create(),
             ]
         );
     }

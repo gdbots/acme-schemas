@@ -18,7 +18,7 @@ export default class ExpireNodeV1Mixin extends Mixin {
     return [
       Fb.create('node_ref', T.IdentifierType.create())
         .required()
-        .build()
+        .build(),
     ];
   }
 }

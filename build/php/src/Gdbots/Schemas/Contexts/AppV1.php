@@ -40,7 +40,7 @@ final class AppV1 extends AbstractMessage implements
                 Fb::create('variant', T\StringType::create())
                     ->maxLength(20)
                     ->pattern('^[\w\.-]+$')
-                    ->build()
+                    ->build(),
             ]
         );
     }

@@ -29,7 +29,7 @@ final class PublishNodeV1Mixin extends AbstractMixin
                 ->className(NodeRef::class)
                 ->build(),
             Fb::create('publish_at', T\DateTimeType::create())
-                ->build()
+                ->build(),
         ];
     }
 }
