@@ -1,5 +1,8 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/enrichments/mixin/time-parting/1-0-0.json#
+import DayOfWeek from '@gdbots/schemas/gdbots/common/enums/DayOfWeek';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
+import Month from '@gdbots/schemas/gdbots/common/enums/Month';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/Type';
 
@@ -18,14 +21,14 @@ export default class TimePartingV1Mixin extends Mixin {
     return [
       Fb.create('month_of_year', T.IntEnumType.create())
         .withDefault(Month.UNKNOWN)
-        .instance(Month)
+        .classProto(Month)
         .build(),
       Fb.create('day_of_month', T.TinyIntType.create())
         .max(31)
         .build(),
       Fb.create('day_of_week', T.IntEnumType.create())
         .withDefault(DayOfWeek.UNKNOWN)
-        .instance(DayOfWeek)
+        .classProto(DayOfWeek)
         .build(),
       Fb.create('is_weekend', T.BooleanType.create())
         .build(),

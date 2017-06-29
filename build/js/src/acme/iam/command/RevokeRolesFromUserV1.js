@@ -1,6 +1,7 @@
-import Message from '@gdbots/pbj/Message';
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/command/revoke-roles-from-user/1-0-0.json#
 import GdbotsIamRevokeRolesFromUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/revoke-roles-from-user/RevokeRolesFromUserV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
+import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class RevokeRolesFromUserV1 extends Message {
@@ -19,4 +20,3 @@ export default class RevokeRolesFromUserV1 extends Message {
     );
   }
 }
-

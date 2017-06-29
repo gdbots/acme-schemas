@@ -1,5 +1,7 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/search-nodes-request/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/Type';
 
@@ -29,7 +31,7 @@ export default class SearchNodesRequestV1Mixin extends Mixin {
         .withDefault(1)
         .build(),
       Fb.create('status', T.StringEnumType.create())
-        .instance(NodeStatus)
+        .classProto(NodeStatus)
         .build(),
       Fb.create('created_after', T.DateTimeType.create())
         .build(),

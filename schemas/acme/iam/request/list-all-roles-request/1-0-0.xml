@@ -8,14 +8,5 @@
       <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
       <curie-major>gdbots:iam:mixin:list-all-roles-request:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Request</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/request</directory>
-    </js-options>
   </schema>
 </pbj-schema>

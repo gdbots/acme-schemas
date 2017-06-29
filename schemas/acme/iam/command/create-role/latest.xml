@@ -9,14 +9,5 @@
       <curie-major>gdbots:ncr:mixin:create-node:v1</curie-major>
       <curie-major>gdbots:iam:mixin:create-role:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Command</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/command</directory>
-    </js-options>
   </schema>
 </pbj-schema>

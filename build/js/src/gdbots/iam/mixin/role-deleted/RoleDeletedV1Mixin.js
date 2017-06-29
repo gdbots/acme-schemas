@@ -1,4 +1,4 @@
-import Fb from '@gdbots/pbj/FieldBuilder';
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/iam/mixin/role-deleted/1-0-0.json#
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
 
@@ -8,12 +8,5 @@ export default class RoleDeletedV1Mixin extends Mixin {
    */
   getId() {
     return SchemaId.fromString('pbj:gdbots:iam:mixin:role-deleted:1-0-0');
-  }
-
-  /**
-   * @returns {Field[]}
-   */
-  getFields() {
-    return [];
   }
 }

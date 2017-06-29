@@ -11,7 +11,7 @@
     "composer/composer": "1.0.*@dev",
     "phpunit/phpunit": "~6.0",
     "gdbots/pbjc": "dev-js",
-    "gdbots/schemas": "~1.1"
+    "gdbots/schemas": "dev-js-compiler"
   },
   "autoload": {
     "files": ["build/php/src/pbj-schemas.php"],
@@ -28,6 +28,7 @@
   "scripts": {
     "pbjc": [
       "vendor/bin/pbjc",
+      "git add .",
       "@test"
     ],
     "post-package-install": [

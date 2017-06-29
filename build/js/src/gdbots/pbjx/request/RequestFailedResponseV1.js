@@ -1,5 +1,7 @@
-import Message from '@gdbots/pbj/Message';
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/pbjx/request/request-failed-response/1-0-0.json#
+import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -31,4 +33,3 @@ export default class RequestFailedResponseV1 extends Message {
     );
   }
 }
-

@@ -1,3 +1,5 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/edge/1-0-0.json#
+import EdgeMultiplicity from '@gdbots/schemas/gdbots/ncr/enums/EdgeMultiplicity';
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
@@ -24,7 +26,7 @@ export default class EdgeV1Mixin extends Mixin {
         .build(),
       Fb.create('multiplicity', T.StringEnumType.create())
         .withDefault(EdgeMultiplicity.MULTI)
-        .instance(EdgeMultiplicity)
+        .classProto(EdgeMultiplicity)
         .overridable(true)
         .build(),
       Fb.create('created_at', T.MicrotimeType.create())

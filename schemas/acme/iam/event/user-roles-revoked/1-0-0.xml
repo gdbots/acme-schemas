@@ -8,14 +8,5 @@
       <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
       <curie-major>gdbots:iam:mixin:user-roles-revoked:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Event</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/event</directory>
-    </js-options>
   </schema>
 </pbj-schema>

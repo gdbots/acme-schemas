@@ -1,6 +1,7 @@
-import Message from '@gdbots/pbj/Message';
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/list-all-roles-response/1-0-0.json#
 import GdbotsIamListAllRolesResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/list-all-roles-response/ListAllRolesResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class ListAllRolesResponseV1 extends Message {
@@ -19,4 +20,3 @@ export default class ListAllRolesResponseV1 extends Message {
     );
   }
 }
-

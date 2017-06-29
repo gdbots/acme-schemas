@@ -1,7 +1,10 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
+import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import T from '@gdbots/pbj/Type';
+import UuidIdentifier from '@gdbots/pbj/WellKnown/UuidIdentifier';
 
 export default class NodeV1Mixin extends Mixin {
   /**
@@ -24,11 +27,13 @@ export default class NodeV1Mixin extends Mixin {
        */
       Fb.create('_id', T.IdentifierType.create())
         .required()
+        .withDefault(() => UuidIdentifier.generate())
+        .classProto(UuidIdentifier)
         .overridable(true)
         .build(),
       Fb.create('status', T.StringEnumType.create())
         .withDefault(NodeStatus.DRAFT)
-        .instance(NodeStatus)
+        .classProto(NodeStatus)
         .build(),
       Fb.create('etag', T.StringType.create())
         .maxLength(100)

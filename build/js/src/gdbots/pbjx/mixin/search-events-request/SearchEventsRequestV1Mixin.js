@@ -1,6 +1,8 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/pbjx/mixin/search-events-request/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
+import SearchEventsSort from '@gdbots/schemas/gdbots/pbjx/enums/SearchEventsSort';
 import T from '@gdbots/pbj/Type';
 
 export default class SearchEventsRequestV1Mixin extends Mixin {
@@ -30,7 +32,7 @@ export default class SearchEventsRequestV1Mixin extends Mixin {
         .build(),
       Fb.create('sort', T.StringEnumType.create())
         .withDefault(SearchEventsSort.RELEVANCE)
-        .instance(SearchEventsSort)
+        .classProto(SearchEventsSort)
         .build(),
       Fb.create('occurred_after', T.DateTimeType.create())
         .build(),

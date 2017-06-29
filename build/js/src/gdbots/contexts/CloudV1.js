@@ -1,3 +1,6 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/contexts/cloud/1-0-0.json#
+import Fb from '@gdbots/pbj/FieldBuilder';
+import Format from '@gdbots/pbj/Enum/Format'
 import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
@@ -35,4 +38,3 @@ export default class CloudV1 extends Message {
     );
   }
 }
-

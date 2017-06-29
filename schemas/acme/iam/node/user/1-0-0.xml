@@ -7,10 +7,13 @@
     <fields>
       <field name="_id" type="identifier" required="true">
         <php-options>
-          <classname>Acme\Schemas\Iam\UserId</classname>
+          <imports>use Acme\Schemas\Iam\UserId;</imports>
+          <class-name>UserId::class</class-name>
           <default>function() { return UserId::generate(); }</default>
         </php-options>
         <js-options>
+          <imports>import UserId from '@gdbots/acme-schemas/acme/iam/UserId';</imports>
+          <class-proto>UserId</class-proto>
           <default>() => UserId.generate()</default>
         </js-options>
       </field>
@@ -37,19 +40,17 @@
     </mixins>
 
     <php-options>
-      <namespace>Acme\Schemas\Iam\Node</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/node</directory>
       <insertion-points>
         <imports>
           <![CDATA[
-// import MessageRef from '@gdbots/pbj/MessageRef';
-import UserId from '@gdbots/acme-schemas/acme/iam/UserId';
-          ]]>
+
+            ]]>
         </imports>
+      </insertion-points>
+    </php-options>
+
+    <js-options>
+      <insertion-points>
         <methods>
           <![CDATA[
 /**

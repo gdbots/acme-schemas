@@ -8,14 +8,5 @@
       <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
       <curie-major>gdbots:iam:mixin:revoke-roles-from-user:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Command</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/command</directory>
-    </js-options>
   </schema>
 </pbj-schema>

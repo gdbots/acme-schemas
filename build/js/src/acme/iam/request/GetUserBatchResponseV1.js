@@ -1,7 +1,8 @@
-import Message from '@gdbots/pbj/Message';
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-user-batch-response/1-0-0.json#
 import GdbotsIamGetUserBatchResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-batch-response/GetUserBatchResponseV1Mixin';
 import GdbotsNcrGetNodeBatchResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-response/GetNodeBatchResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetUserBatchResponseV1 extends Message {
@@ -21,4 +22,3 @@ export default class GetUserBatchResponseV1 extends Message {
     );
   }
 }
-

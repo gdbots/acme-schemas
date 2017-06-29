@@ -1,7 +1,8 @@
-import Message from '@gdbots/pbj/Message';
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-role-history-response/1-0-0.json#
 import GdbotsIamGetRoleHistoryResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-role-history-response/GetRoleHistoryResponseV1Mixin';
 import GdbotsPbjxGetEventsResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-response/GetEventsResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetRoleHistoryResponseV1 extends Message {
@@ -21,4 +22,3 @@ export default class GetRoleHistoryResponseV1 extends Message {
     );
   }
 }
-

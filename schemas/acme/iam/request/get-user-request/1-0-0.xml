@@ -9,14 +9,5 @@
       <curie-major>gdbots:ncr:mixin:get-node-request:v1</curie-major>
       <curie-major>gdbots:iam:mixin:get-user-request:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Request</namespace>
-    </php-options>
-
-    <js-options>
-      <package>@gdbots/acme-schemas</package>
-      <directory>acme/iam/request</directory>
-    </js-options>
   </schema>
 </pbj-schema>

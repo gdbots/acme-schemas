@@ -1,9 +1,9 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/pbjx/envelope/1-0-0.json#
+import Fb from '@gdbots/pbj/FieldBuilder';
+import HttpCode from '@gdbots/schemas/gdbots/pbjx/enums/HttpCode';
 import Message from '@gdbots/pbj/Message';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
-import HttpCode from '
-Notice: Array to string conversion in /Users/greg/www/schemas/acme-schemas/vendor/twig/twig/lib/Twig/Environment.php(462) : eval()'d code on line 100
-Array';
 
 export default class EnvelopeV1 extends Message {
   /**
@@ -25,7 +25,7 @@ export default class EnvelopeV1 extends Message {
           .build(),
         Fb.create('http_code', T.IntEnumType.create())
           .withDefault(HttpCode.HTTP_OK)
-          .instance(HttpCode)
+          .classProto(HttpCode)
           .build(),
         Fb.create('etag', T.StringType.create())
           .maxLength(100)
@@ -44,4 +44,3 @@ export default class EnvelopeV1 extends Message {
     );
   }
 }
-

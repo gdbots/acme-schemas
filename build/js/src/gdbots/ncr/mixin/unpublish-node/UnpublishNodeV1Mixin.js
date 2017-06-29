@@ -1,3 +1,4 @@
+// @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/unpublish-node/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
