@@ -10,7 +10,6 @@ languages:
 #    packages:
 #      acme: 'Acme\Schemas'
 #      gdbots: 'Gdbots\Schemas'
-#    manifest: ./build/php/src/pbj-schemas.php
 
   js:
     include_all: true
@@ -18,7 +17,6 @@ languages:
     packages:
       acme: '@gdbots/acme-schemas'
       gdbots: '@gdbots/schemas'
-    manifest: ./build/js/src/pbj-schemas.js
 
   json-schema:
     include_all: true
