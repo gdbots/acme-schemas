@@ -2,6 +2,7 @@
 import GdbotsIamListAllRolesResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/list-all-roles-response/ListAllRolesResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class ListAllRolesResponseV1 extends Message {
@@ -16,7 +17,9 @@ export default class ListAllRolesResponseV1 extends Message {
       [
         GdbotsPbjxResponseV1Mixin.create(),
         GdbotsIamListAllRolesResponseV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:list-all-roles-response', ListAllRolesResponseV1);

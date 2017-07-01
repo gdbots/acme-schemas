@@ -3,6 +3,7 @@ import GdbotsIamGetUserHistoryResponseV1Mixin from '@gdbots/schemas/gdbots/iam/m
 import GdbotsPbjxGetEventsResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-response/GetEventsResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetUserHistoryResponseV1 extends Message {
@@ -18,7 +19,9 @@ export default class GetUserHistoryResponseV1 extends Message {
         GdbotsPbjxResponseV1Mixin.create(),
         GdbotsPbjxGetEventsResponseV1Mixin.create(),
         GdbotsIamGetUserHistoryResponseV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:get-user-history-response', GetUserHistoryResponseV1);

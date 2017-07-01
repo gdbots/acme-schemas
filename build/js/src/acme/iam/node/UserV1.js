@@ -6,6 +6,7 @@ import GdbotsNcrIndexedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/indexed/In
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 import UserId from '@gdbots/acme-schemas/acme/iam/UserId';
@@ -41,7 +42,7 @@ export default class UserV1 extends Message {
         GdbotsIamUserV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
-      ]
+      ],
     );
   }
 
@@ -54,3 +55,4 @@ export default class UserV1 extends Message {
 }
 
 GdbotsNcrNodeV1Trait(UserV1);
+MessageResolver.register('acme:iam:node:user', UserV1);

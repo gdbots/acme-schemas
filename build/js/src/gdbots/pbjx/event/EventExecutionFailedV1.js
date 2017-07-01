@@ -3,6 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxIndexedV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/indexed/IndexedV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -36,7 +37,9 @@ export default class EventExecutionFailedV1 extends Message {
       [
         GdbotsPbjxEventV1Mixin.create(),
         GdbotsPbjxIndexedV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('gdbots:pbjx:event:event-execution-failed', EventExecutionFailedV1);

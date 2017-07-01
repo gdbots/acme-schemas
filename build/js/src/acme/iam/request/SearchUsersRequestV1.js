@@ -3,6 +3,7 @@ import GdbotsIamSearchUsersRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin
 import GdbotsNcrSearchNodesRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/search-nodes-request/SearchNodesRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class SearchUsersRequestV1 extends Message {
@@ -18,7 +19,9 @@ export default class SearchUsersRequestV1 extends Message {
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrSearchNodesRequestV1Mixin.create(),
         GdbotsIamSearchUsersRequestV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:search-users-request', SearchUsersRequestV1);

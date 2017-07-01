@@ -3,6 +3,7 @@ import GdbotsIamGetRoleRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get
 import GdbotsNcrGetNodeRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-request/GetNodeRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetRoleRequestV1 extends Message {
@@ -18,7 +19,9 @@ export default class GetRoleRequestV1 extends Message {
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrGetNodeRequestV1Mixin.create(),
         GdbotsIamGetRoleRequestV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:get-role-request', GetRoleRequestV1);

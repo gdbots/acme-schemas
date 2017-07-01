@@ -3,6 +3,7 @@ import GdbotsIamCreateRoleV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/create-
 import GdbotsNcrCreateNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/create-node/CreateNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class CreateRoleV1 extends Message {
@@ -18,7 +19,9 @@ export default class CreateRoleV1 extends Message {
         GdbotsPbjxCommandV1Mixin.create(),
         GdbotsNcrCreateNodeV1Mixin.create(),
         GdbotsIamCreateRoleV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:command:create-role', CreateRoleV1);

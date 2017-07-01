@@ -3,6 +3,7 @@ import GdbotsIamGetUserResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/ge
 import GdbotsNcrGetNodeResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-response/GetNodeResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetUserResponseV1 extends Message {
@@ -18,7 +19,9 @@ export default class GetUserResponseV1 extends Message {
         GdbotsPbjxResponseV1Mixin.create(),
         GdbotsNcrGetNodeResponseV1Mixin.create(),
         GdbotsIamGetUserResponseV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:get-user-response', GetUserResponseV1);

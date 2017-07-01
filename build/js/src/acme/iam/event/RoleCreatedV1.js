@@ -8,6 +8,7 @@ import GdbotsIamRoleCreatedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/role-c
 import GdbotsNcrNodeCreatedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-created/NodeCreatedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class RoleCreatedV1 extends Message {
@@ -28,7 +29,9 @@ export default class RoleCreatedV1 extends Message {
         GdbotsEnrichmentsTimePartingV1Mixin.create(),
         GdbotsEnrichmentsTimeSamplingV1Mixin.create(),
         GdbotsEnrichmentsUaParserV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:event:role-created', RoleCreatedV1);

@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import HttpCode from '@gdbots/schemas/gdbots/pbjx/enums/HttpCode';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -40,7 +41,9 @@ export default class EnvelopeV1 extends Message {
           .build(),
         Fb.create('message', T.MessageType.create())
           .build(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('gdbots:pbjx::envelope', EnvelopeV1);

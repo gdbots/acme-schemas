@@ -1,6 +1,7 @@
 // @link http://acme-schemas.gdbots.io/json-schema/gdbots/contexts/user-agent/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -36,7 +37,9 @@ export default class UserAgentV1 extends Message {
         Fb.create('dvce_family', T.StringType.create())
           .pattern('.+')
           .build(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('gdbots:contexts::user-agent', UserAgentV1);

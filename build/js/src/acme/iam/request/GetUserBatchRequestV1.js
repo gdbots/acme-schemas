@@ -3,6 +3,7 @@ import GdbotsIamGetUserBatchRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixi
 import GdbotsNcrGetNodeBatchRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-request/GetNodeBatchRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetUserBatchRequestV1 extends Message {
@@ -18,7 +19,9 @@ export default class GetUserBatchRequestV1 extends Message {
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrGetNodeBatchRequestV1Mixin.create(),
         GdbotsIamGetUserBatchRequestV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:get-user-batch-request', GetUserBatchRequestV1);

@@ -1,6 +1,6 @@
 // @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node-renamed/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/Enum/Format'
+import Format from '@gdbots/pbj/Enum/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';

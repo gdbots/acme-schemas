@@ -2,6 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 import T from '@gdbots/pbj/Type';
 
@@ -19,7 +20,9 @@ export default class EchoRequestV1 extends Message {
       ],
       [
         GdbotsPbjxRequestV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('gdbots:pbjx:request:echo-request', EchoRequestV1);

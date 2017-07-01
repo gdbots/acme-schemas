@@ -3,6 +3,7 @@ import GdbotsIamRoleV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/role/RoleV1Mi
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class RoleV1 extends Message {
@@ -17,9 +18,10 @@ export default class RoleV1 extends Message {
       [
         GdbotsNcrNodeV1Mixin.create(),
         GdbotsIamRoleV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
 
 GdbotsNcrNodeV1Trait(RoleV1);
+MessageResolver.register('acme:iam:node:role', RoleV1);

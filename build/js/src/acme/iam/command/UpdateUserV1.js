@@ -3,6 +3,7 @@ import GdbotsIamUpdateUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/update-
 import GdbotsNcrUpdateNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/update-node/UpdateNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class UpdateUserV1 extends Message {
@@ -18,7 +19,9 @@ export default class UpdateUserV1 extends Message {
         GdbotsPbjxCommandV1Mixin.create(),
         GdbotsNcrUpdateNodeV1Mixin.create(),
         GdbotsIamUpdateUserV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:command:update-user', UpdateUserV1);

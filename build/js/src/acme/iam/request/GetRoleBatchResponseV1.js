@@ -3,6 +3,7 @@ import GdbotsIamGetRoleBatchResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mix
 import GdbotsNcrGetNodeBatchResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-response/GetNodeBatchResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class GetRoleBatchResponseV1 extends Message {
@@ -18,7 +19,9 @@ export default class GetRoleBatchResponseV1 extends Message {
         GdbotsPbjxResponseV1Mixin.create(),
         GdbotsNcrGetNodeBatchResponseV1Mixin.create(),
         GdbotsIamGetRoleBatchResponseV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:request:get-role-batch-response', GetRoleBatchResponseV1);

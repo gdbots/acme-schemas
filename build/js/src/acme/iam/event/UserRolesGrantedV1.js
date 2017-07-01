@@ -2,6 +2,7 @@
 import GdbotsIamUserRolesGrantedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user-roles-granted/UserRolesGrantedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import Message from '@gdbots/pbj/Message';
+import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
 
 export default class UserRolesGrantedV1 extends Message {
@@ -16,7 +17,9 @@ export default class UserRolesGrantedV1 extends Message {
       [
         GdbotsPbjxEventV1Mixin.create(),
         GdbotsIamUserRolesGrantedV1Mixin.create(),
-      ]
+      ],
     );
   }
 }
+
+MessageResolver.register('acme:iam:event:user-roles-granted', UserRolesGrantedV1);
