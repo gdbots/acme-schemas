@@ -25,3 +25,5 @@ export default class CreateRoleV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:create-role', CreateRoleV1);
+Object.freeze(CreateRoleV1);
+Object.freeze(CreateRoleV1.prototype);

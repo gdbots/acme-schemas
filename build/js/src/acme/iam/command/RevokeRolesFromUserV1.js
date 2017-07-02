@@ -23,3 +23,5 @@ export default class RevokeRolesFromUserV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:revoke-roles-from-user', RevokeRolesFromUserV1);
+Object.freeze(RevokeRolesFromUserV1);
+Object.freeze(RevokeRolesFromUserV1.prototype);

@@ -25,3 +25,5 @@ export default class UpdateRoleV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:update-role', UpdateRoleV1);
+Object.freeze(UpdateRoleV1);
+Object.freeze(UpdateRoleV1.prototype);

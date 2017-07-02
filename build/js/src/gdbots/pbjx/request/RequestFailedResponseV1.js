@@ -4,7 +4,7 @@ import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/respons
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class RequestFailedResponseV1 extends Message {
   /**
@@ -36,3 +36,5 @@ export default class RequestFailedResponseV1 extends Message {
 }
 
 MessageResolver.register('gdbots:pbjx:request:request-failed-response', RequestFailedResponseV1);
+Object.freeze(RequestFailedResponseV1);
+Object.freeze(RequestFailedResponseV1.prototype);

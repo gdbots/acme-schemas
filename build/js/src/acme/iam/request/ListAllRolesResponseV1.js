@@ -23,3 +23,5 @@ export default class ListAllRolesResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:list-all-roles-response', ListAllRolesResponseV1);
+Object.freeze(ListAllRolesResponseV1);
+Object.freeze(ListAllRolesResponseV1.prototype);

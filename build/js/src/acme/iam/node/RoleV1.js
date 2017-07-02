@@ -25,3 +25,5 @@ export default class RoleV1 extends Message {
 
 GdbotsNcrNodeV1Trait(RoleV1);
 MessageResolver.register('acme:iam:node:role', RoleV1);
+Object.freeze(RoleV1);
+Object.freeze(RoleV1.prototype);

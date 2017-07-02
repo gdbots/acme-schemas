@@ -4,7 +4,7 @@ import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class CreateEdgeV1 extends Message {
   /**
@@ -30,3 +30,5 @@ export default class CreateEdgeV1 extends Message {
 }
 
 MessageResolver.register('gdbots:ncr:command:create-edge', CreateEdgeV1);
+Object.freeze(CreateEdgeV1);
+Object.freeze(CreateEdgeV1.prototype);

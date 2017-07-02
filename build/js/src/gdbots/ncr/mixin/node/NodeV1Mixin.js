@@ -3,8 +3,8 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/Type';
-import UuidIdentifier from '@gdbots/pbj/WellKnown/UuidIdentifier';
+import T from '@gdbots/pbj/types';
+import UuidIdentifier from '@gdbots/pbj/well-known/UuidIdentifier';
 
 export default class NodeV1Mixin extends Mixin {
   /**

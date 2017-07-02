@@ -8,7 +8,7 @@ import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Tr
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 import UserId from '@gdbots/acme-schemas/acme/iam/UserId';
 
 export default class UserV1 extends Message {
@@ -56,3 +56,5 @@ export default class UserV1 extends Message {
 
 GdbotsNcrNodeV1Trait(UserV1);
 MessageResolver.register('acme:iam:node:user', UserV1);
+Object.freeze(UserV1);
+Object.freeze(UserV1.prototype);

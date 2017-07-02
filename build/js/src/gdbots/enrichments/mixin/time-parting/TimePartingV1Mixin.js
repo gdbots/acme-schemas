@@ -4,7 +4,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import Month from '@gdbots/schemas/gdbots/common/enums/Month';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class TimePartingV1Mixin extends Mixin {
   /**

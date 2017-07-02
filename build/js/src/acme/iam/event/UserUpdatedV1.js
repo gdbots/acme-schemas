@@ -25,3 +25,5 @@ export default class UserUpdatedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:user-updated', UserUpdatedV1);
+Object.freeze(UserUpdatedV1);
+Object.freeze(UserUpdatedV1.prototype);

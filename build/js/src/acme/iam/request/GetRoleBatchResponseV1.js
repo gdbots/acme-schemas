@@ -25,3 +25,5 @@ export default class GetRoleBatchResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-role-batch-response', GetRoleBatchResponseV1);
+Object.freeze(GetRoleBatchResponseV1);
+Object.freeze(GetRoleBatchResponseV1.prototype);

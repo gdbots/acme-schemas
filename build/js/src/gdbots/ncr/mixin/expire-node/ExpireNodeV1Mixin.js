@@ -2,7 +2,7 @@
 import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class ExpireNodeV1Mixin extends Mixin {
   /**

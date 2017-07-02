@@ -35,3 +35,5 @@ export default class UserCreatedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:user-created', UserCreatedV1);
+Object.freeze(UserCreatedV1);
+Object.freeze(UserCreatedV1.prototype);

@@ -25,3 +25,5 @@ export default class RoleDeletedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:role-deleted', RoleDeletedV1);
+Object.freeze(RoleDeletedV1);
+Object.freeze(RoleDeletedV1.prototype);

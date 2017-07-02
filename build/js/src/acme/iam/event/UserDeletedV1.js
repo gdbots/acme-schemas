@@ -25,3 +25,5 @@ export default class UserDeletedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:user-deleted', UserDeletedV1);
+Object.freeze(UserDeletedV1);
+Object.freeze(UserDeletedV1.prototype);

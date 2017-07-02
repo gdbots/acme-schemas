@@ -25,3 +25,5 @@ export default class GetRoleResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-role-response', GetRoleResponseV1);
+Object.freeze(GetRoleResponseV1);
+Object.freeze(GetRoleResponseV1.prototype);

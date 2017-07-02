@@ -23,3 +23,5 @@ export default class UserRolesGrantedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:user-roles-granted', UserRolesGrantedV1);
+Object.freeze(UserRolesGrantedV1);
+Object.freeze(UserRolesGrantedV1.prototype);

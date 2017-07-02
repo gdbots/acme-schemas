@@ -1,9 +1,9 @@
 // @link http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node-deleted/1-0-0.json#
 import Fb from '@gdbots/pbj/FieldBuilder';
-import Format from '@gdbots/pbj/Enum/Format';
+import Format from '@gdbots/pbj/enums/Format';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class NodeDeletedV1Mixin extends Mixin {
   /**

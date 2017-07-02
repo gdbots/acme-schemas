@@ -25,3 +25,5 @@ export default class GetRoleHistoryResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-role-history-response', GetRoleHistoryResponseV1);
+Object.freeze(GetRoleHistoryResponseV1);
+Object.freeze(GetRoleHistoryResponseV1.prototype);

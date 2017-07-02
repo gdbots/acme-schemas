@@ -25,3 +25,5 @@ export default class DeleteRoleV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:delete-role', DeleteRoleV1);
+Object.freeze(DeleteRoleV1);
+Object.freeze(DeleteRoleV1.prototype);

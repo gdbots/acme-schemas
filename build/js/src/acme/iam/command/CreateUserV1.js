@@ -25,3 +25,5 @@ export default class CreateUserV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:create-user', CreateUserV1);
+Object.freeze(CreateUserV1);
+Object.freeze(CreateUserV1.prototype);

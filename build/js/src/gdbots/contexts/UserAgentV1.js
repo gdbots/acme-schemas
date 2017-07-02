@@ -3,7 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class UserAgentV1 extends Message {
   /**
@@ -43,3 +43,5 @@ export default class UserAgentV1 extends Message {
 }
 
 MessageResolver.register('gdbots:contexts::user-agent', UserAgentV1);
+Object.freeze(UserAgentV1);
+Object.freeze(UserAgentV1.prototype);

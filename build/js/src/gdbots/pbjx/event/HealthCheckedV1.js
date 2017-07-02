@@ -4,7 +4,7 @@ import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/Even
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class HealthCheckedV1 extends Message {
   /**
@@ -30,3 +30,5 @@ export default class HealthCheckedV1 extends Message {
 }
 
 MessageResolver.register('gdbots:pbjx:event:health-checked', HealthCheckedV1);
+Object.freeze(HealthCheckedV1);
+Object.freeze(HealthCheckedV1.prototype);

@@ -25,3 +25,5 @@ export default class GetUserResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-user-response', GetUserResponseV1);
+Object.freeze(GetUserResponseV1);
+Object.freeze(GetUserResponseV1.prototype);

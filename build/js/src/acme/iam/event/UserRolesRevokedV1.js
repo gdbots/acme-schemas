@@ -23,3 +23,5 @@ export default class UserRolesRevokedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:user-roles-revoked', UserRolesRevokedV1);
+Object.freeze(UserRolesRevokedV1);
+Object.freeze(UserRolesRevokedV1.prototype);

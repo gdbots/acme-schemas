@@ -25,3 +25,5 @@ export default class DeleteUserV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:delete-user', DeleteUserV1);
+Object.freeze(DeleteUserV1);
+Object.freeze(DeleteUserV1.prototype);

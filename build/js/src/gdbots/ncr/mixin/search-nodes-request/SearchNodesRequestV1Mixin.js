@@ -3,7 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import NodeStatus from '@gdbots/schemas/gdbots/ncr/enums/NodeStatus';
 import SchemaId from '@gdbots/pbj/SchemaId';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class SearchNodesRequestV1Mixin extends Mixin {
   /**

@@ -5,7 +5,7 @@ import GdbotsPbjxIndexedV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/indexed/
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class EventExecutionFailedV1 extends Message {
   /**
@@ -43,3 +43,5 @@ export default class EventExecutionFailedV1 extends Message {
 }
 
 MessageResolver.register('gdbots:pbjx:event:event-execution-failed', EventExecutionFailedV1);
+Object.freeze(EventExecutionFailedV1);
+Object.freeze(EventExecutionFailedV1.prototype);

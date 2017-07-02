@@ -25,3 +25,5 @@ export default class GetUserHistoryResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-user-history-response', GetUserHistoryResponseV1);
+Object.freeze(GetUserHistoryResponseV1);
+Object.freeze(GetUserHistoryResponseV1.prototype);

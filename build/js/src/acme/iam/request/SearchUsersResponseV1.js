@@ -25,3 +25,5 @@ export default class SearchUsersResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:search-users-response', SearchUsersResponseV1);
+Object.freeze(SearchUsersResponseV1);
+Object.freeze(SearchUsersResponseV1.prototype);

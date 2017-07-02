@@ -23,3 +23,5 @@ export default class GrantRolesToUserV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:command:grant-roles-to-user', GrantRolesToUserV1);
+Object.freeze(GrantRolesToUserV1);
+Object.freeze(GrantRolesToUserV1.prototype);

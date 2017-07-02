@@ -25,3 +25,5 @@ export default class GetUserBatchResponseV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:request:get-user-batch-response', GetUserBatchResponseV1);
+Object.freeze(GetUserBatchResponseV1);
+Object.freeze(GetUserBatchResponseV1.prototype);

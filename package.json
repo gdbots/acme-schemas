@@ -18,14 +18,7 @@
   "jsnext:main": "./index.js",
   "dependencies": {
     "@gdbots/common": "^0.1.0",
-    "@gdbots/pbj": "git://github.com/gdbots/pbj-js.git#beta",
-    "base-64": "^0.1.0",
-    "bignumber.js": "^4.0.2",
-    "lodash": "^4.17.4",
-    "lodash-es": "^4.17.4",
-    "moment": "^2.18.1",
-    "utf8": "^2.1.2",
-    "uuid": "^3.0.1"
+    "@gdbots/pbj": "git://github.com/gdbots/pbj-js.git#temp"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -38,12 +31,11 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-import-resolver-babel-module": "^3.0.0",
-    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-import": "^2.6.1",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "faucet": "^0.0.1",
-    "lodash-es": "^4.17.4",
     "rimraf": "^2.6.1",
-    "tape": "^4.6.3"
+    "tape": "^4.7.0"
   }
 }

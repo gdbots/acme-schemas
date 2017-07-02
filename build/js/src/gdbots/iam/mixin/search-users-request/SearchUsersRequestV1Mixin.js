@@ -3,7 +3,7 @@ import Fb from '@gdbots/pbj/FieldBuilder';
 import Mixin from '@gdbots/pbj/Mixin';
 import SchemaId from '@gdbots/pbj/SchemaId';
 import SearchUsersSort from '@gdbots/schemas/gdbots/iam/enums/SearchUsersSort';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class SearchUsersRequestV1Mixin extends Mixin {
   /**

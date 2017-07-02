@@ -4,7 +4,7 @@ import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/Even
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/Type';
+import T from '@gdbots/pbj/types';
 
 export default class EdgeCreatedV1 extends Message {
   /**
@@ -30,3 +30,5 @@ export default class EdgeCreatedV1 extends Message {
 }
 
 MessageResolver.register('gdbots:ncr:event:edge-created', EdgeCreatedV1);
+Object.freeze(EdgeCreatedV1);
+Object.freeze(EdgeCreatedV1.prototype);

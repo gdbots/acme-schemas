@@ -23,3 +23,5 @@ export default class GetNodeBatchResponseV1 extends Message {
 }
 
 MessageResolver.register('gdbots:ncr:request:get-node-batch-response', GetNodeBatchResponseV1);
+Object.freeze(GetNodeBatchResponseV1);
+Object.freeze(GetNodeBatchResponseV1.prototype);

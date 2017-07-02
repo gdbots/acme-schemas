@@ -25,3 +25,5 @@ export default class RoleUpdatedV1 extends Message {
 }
 
 MessageResolver.register('acme:iam:event:role-updated', RoleUpdatedV1);
+Object.freeze(RoleUpdatedV1);
+Object.freeze(RoleUpdatedV1.prototype);
