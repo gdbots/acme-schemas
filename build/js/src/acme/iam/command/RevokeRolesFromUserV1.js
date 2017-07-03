@@ -1,6 +1,7 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/command/revoke-roles-from-user/1-0-0.json#
 import GdbotsIamRevokeRolesFromUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/revoke-roles-from-user/RevokeRolesFromUserV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
+import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -22,6 +23,7 @@ export default class RevokeRolesFromUserV1 extends Message {
   }
 }
 
+GdbotsPbjxCommandV1Trait(RevokeRolesFromUserV1);
 MessageResolver.register('acme:iam:command:revoke-roles-from-user', RevokeRolesFromUserV1);
 Object.freeze(RevokeRolesFromUserV1);
 Object.freeze(RevokeRolesFromUserV1.prototype);

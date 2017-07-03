@@ -2,6 +2,7 @@
 import GdbotsIamUserDeletedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user-deleted/UserDeletedV1Mixin';
 import GdbotsNcrNodeDeletedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-deleted/NodeDeletedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
+import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class UserDeletedV1 extends Message {
   }
 }
 
+GdbotsPbjxEventV1Trait(UserDeletedV1);
 MessageResolver.register('acme:iam:event:user-deleted', UserDeletedV1);
 Object.freeze(UserDeletedV1);
 Object.freeze(UserDeletedV1.prototype);

@@ -2,6 +2,7 @@
 import GdbotsIamGetRoleResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-role-response/GetRoleResponseV1Mixin';
 import GdbotsNcrGetNodeResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-response/GetNodeResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class GetRoleResponseV1 extends Message {
   }
 }
 
+GdbotsPbjxResponseV1Trait(GetRoleResponseV1);
 MessageResolver.register('acme:iam:request:get-role-response', GetRoleResponseV1);
 Object.freeze(GetRoleResponseV1);
 Object.freeze(GetRoleResponseV1.prototype);

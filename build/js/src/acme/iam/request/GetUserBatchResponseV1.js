@@ -2,6 +2,7 @@
 import GdbotsIamGetUserBatchResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-batch-response/GetUserBatchResponseV1Mixin';
 import GdbotsNcrGetNodeBatchResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-batch-response/GetNodeBatchResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class GetUserBatchResponseV1 extends Message {
   }
 }
 
+GdbotsPbjxResponseV1Trait(GetUserBatchResponseV1);
 MessageResolver.register('acme:iam:request:get-user-batch-response', GetUserBatchResponseV1);
 Object.freeze(GetUserBatchResponseV1);
 Object.freeze(GetUserBatchResponseV1.prototype);

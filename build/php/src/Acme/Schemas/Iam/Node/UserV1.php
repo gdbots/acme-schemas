@@ -1,5 +1,5 @@
 <?php
-
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/node/user/1-0-0.json#
 namespace Acme\Schemas\Iam\Node;
 
 use Acme\Schemas\Iam\UserId;

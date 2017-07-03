@@ -1,5 +1,6 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/node/role/1-0-0.json#
 import GdbotsIamRoleV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/role/RoleV1Mixin';
+import GdbotsIamRoleV1Trait from '@gdbots/schemas/gdbots/iam/mixin/role/RoleV1Trait';
 import GdbotsNcrNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Mixin';
 import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Trait';
 import Message from '@gdbots/pbj/Message';
@@ -24,6 +25,7 @@ export default class RoleV1 extends Message {
 }
 
 GdbotsNcrNodeV1Trait(RoleV1);
+GdbotsIamRoleV1Trait(RoleV1);
 MessageResolver.register('acme:iam:node:role', RoleV1);
 Object.freeze(RoleV1);
 Object.freeze(RoleV1.prototype);

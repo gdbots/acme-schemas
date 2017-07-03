@@ -2,6 +2,7 @@
 import GdbotsIamSearchUsersResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/search-users-response/SearchUsersResponseV1Mixin';
 import GdbotsNcrSearchNodesResponseV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/search-nodes-response/SearchNodesResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
+import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class SearchUsersResponseV1 extends Message {
   }
 }
 
+GdbotsPbjxResponseV1Trait(SearchUsersResponseV1);
 MessageResolver.register('acme:iam:request:search-users-response', SearchUsersResponseV1);
 Object.freeze(SearchUsersResponseV1);
 Object.freeze(SearchUsersResponseV1.prototype);

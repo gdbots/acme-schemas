@@ -7,6 +7,7 @@ import GdbotsEnrichmentsUaParserV1Mixin from '@gdbots/schemas/gdbots/enrichments
 import GdbotsIamUserCreatedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user-created/UserCreatedV1Mixin';
 import GdbotsNcrNodeCreatedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-created/NodeCreatedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
+import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -34,6 +35,7 @@ export default class UserCreatedV1 extends Message {
   }
 }
 
+GdbotsPbjxEventV1Trait(UserCreatedV1);
 MessageResolver.register('acme:iam:event:user-created', UserCreatedV1);
 Object.freeze(UserCreatedV1);
 Object.freeze(UserCreatedV1.prototype);

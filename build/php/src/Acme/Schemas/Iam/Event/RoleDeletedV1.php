@@ -1,5 +1,5 @@
 <?php
-
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/event/role-deleted/1-0-0.json#
 namespace Acme\Schemas\Iam\Event;
 
 use Gdbots\Pbj\AbstractMessage;

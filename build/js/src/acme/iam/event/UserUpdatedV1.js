@@ -2,6 +2,7 @@
 import GdbotsIamUserUpdatedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user-updated/UserUpdatedV1Mixin';
 import GdbotsNcrNodeUpdatedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-updated/NodeUpdatedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
+import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class UserUpdatedV1 extends Message {
   }
 }
 
+GdbotsPbjxEventV1Trait(UserUpdatedV1);
 MessageResolver.register('acme:iam:event:user-updated', UserUpdatedV1);
 Object.freeze(UserUpdatedV1);
 Object.freeze(UserUpdatedV1.prototype);

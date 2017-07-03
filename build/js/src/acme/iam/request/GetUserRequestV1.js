@@ -2,6 +2,7 @@
 import GdbotsIamGetUserRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-request/GetUserRequestV1Mixin';
 import GdbotsNcrGetNodeRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-request/GetNodeRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
+import GdbotsPbjxRequestV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Trait';
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
@@ -24,6 +25,7 @@ export default class GetUserRequestV1 extends Message {
   }
 }
 
+GdbotsPbjxRequestV1Trait(GetUserRequestV1);
 MessageResolver.register('acme:iam:request:get-user-request', GetUserRequestV1);
 Object.freeze(GetUserRequestV1);
 Object.freeze(GetUserRequestV1.prototype);

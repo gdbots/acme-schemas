@@ -4,12 +4,10 @@ namespaces:
   - acme:iam
 
 languages:
-#  php:
-#    include_all: true
-#    output: ./build/php/src
+  php:
+    output: ./build/php/src
 
   js:
-    include_all: true
     output: ./build/js/src
     packages:
       acme: '@gdbots/acme-schemas'

@@ -23,7 +23,7 @@
             ],
             "alias": {
               "@gdbots/acme-schemas": "./build/js/src",
-              "@gdbots/schemas": "./build/js/src"
+              "@gdbots/schemas": "./vendor/gdbots/schemas/build/js/src"
             }
           }
         ]
@@ -53,7 +53,7 @@
             ],
             "alias": {
               "@gdbots/acme-schemas": "./build/js/src",
-              "@gdbots/schemas": "./build/js/src"
+              "@gdbots/schemas": "./vendor/gdbots/schemas/build/js/src"
             }
           }
         ]
