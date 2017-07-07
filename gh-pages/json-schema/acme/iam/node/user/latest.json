@@ -276,56 +276,11 @@
         "type": "string",
         "rule": "map"
       }
-    },
-    "test_any_of1": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/app"
-        }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
-    },
-    "test_any_of2": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/app"
-        },
-        {
-          "$ref": "#/definitions/cloud"
-        }
-      ],
-      "pbj": {
-        "type": "message",
-        "rule": "single"
-      }
     }
   },
   "required": [
     "_schema",
     "_id"
   ],
-  "definitions": {
-    "app": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/contexts/app/1-0-0.json#"
-        }
-      ]
-    },
-    "cloud": {
-      "type": "object",
-      "anyOf": [
-        {
-          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/contexts/cloud/1-0-0.json#"
-        }
-      ]
-    }
-  },
   "additionalProperties": false
 }

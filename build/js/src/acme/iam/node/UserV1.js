@@ -26,17 +26,6 @@ export default class UserV1 extends Message {
           .withDefault(() => UserId.generate())
           .classProto(UserId)
           .build(),
-        Fb.create('test_any_of1', T.MessageType.create())
-          .anyOfCuries([
-            'gdbots:contexts::app',
-          ])
-          .build(),
-        Fb.create('test_any_of2', T.MessageType.create())
-          .anyOfCuries([
-            'gdbots:contexts::app',
-            'gdbots:contexts::cloud',
-          ])
-          .build(),
       ],
       [
         GdbotsNcrNodeV1Mixin.create(),

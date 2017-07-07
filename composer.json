@@ -5,13 +5,13 @@
   "type": "pbj-schema-store",
   "license": "Apache-2.0",
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.1",
+    "gdbots/schemas": "~1.2"
   },
   "require-dev": {
     "composer/composer": "1.0.*@dev",
     "phpunit/phpunit": "~6.0",
-    "gdbots/pbjc": "dev-js",
-    "gdbots/schemas": "dev-js-compiler"
+    "gdbots/pbjc": "~0.3"
   },
   "autoload": {
     "files": [

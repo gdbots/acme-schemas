@@ -17,19 +17,6 @@
           <default>() => UserId.generate()</default>
         </js-options>
       </field>
-
-      <field name="test_any_of1" type="message">
-        <any-of>
-          <curie>gdbots:contexts::app</curie>
-        </any-of>
-      </field>
-
-      <field name="test_any_of2" type="message">
-        <any-of>
-          <curie>gdbots:contexts::app</curie>
-          <curie>gdbots:contexts::cloud</curie>
-        </any-of>
-      </field>
     </fields>
 
     <mixins>

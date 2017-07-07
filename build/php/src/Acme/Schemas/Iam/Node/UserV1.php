@@ -9,8 +9,6 @@ use Gdbots\Pbj\Schema;
 use Gdbots\Pbj\Type as T;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
-use Gdbots\Schemas\Contexts\App as GdbotsContextsApp;
-use Gdbots\Schemas\Contexts\Cloud as GdbotsContextsCloud;
 use Gdbots\Schemas\Iam\Mixin\User\UserV1 as GdbotsIamUserV1;
 use Gdbots\Schemas\Iam\Mixin\User\UserV1Mixin as GdbotsIamUserV1Mixin;
 use Gdbots\Schemas\Iam\Mixin\User\UserV1Trait as GdbotsIamUserV1Trait;
@@ -41,17 +39,6 @@ final class UserV1 extends AbstractMessage implements
                     ->required()
                     ->withDefault(function() { return UserId::generate(); })
                     ->className(UserId::class)
-                    ->build(),
-                Fb::create('test_any_of1', T\MessageType::create())
-                    ->anyOfClassNames([
-                        GdbotsContextsApp::class,
-                    ])
-                    ->build(),
-                Fb::create('test_any_of2', T\MessageType::create())
-                    ->anyOfClassNames([
-                        GdbotsContextsApp::class,
-                        GdbotsContextsCloud::class,
-                    ])
                     ->build(),
             ],
             [
