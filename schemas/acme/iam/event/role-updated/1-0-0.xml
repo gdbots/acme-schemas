@@ -9,9 +9,5 @@
       <curie-major>gdbots:ncr:mixin:node-updated:v1</curie-major>
       <curie-major>gdbots:iam:mixin:role-updated:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Event</namespace>
-    </php-options>
   </schema>
 </pbj-schema>

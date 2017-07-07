@@ -9,9 +9,5 @@
       <curie-major>gdbots:ncr:mixin:delete-node:v1</curie-major>
       <curie-major>gdbots:iam:mixin:delete-role:v1</curie-major>
     </mixins>
-
-    <php-options>
-      <namespace>Acme\Schemas\Iam\Command</namespace>
-    </php-options>
   </schema>
 </pbj-schema>
