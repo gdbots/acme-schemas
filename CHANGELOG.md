@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.1.2
+* Use `gdbots/schemas` v1.4.4
+
+
 ## v1.1.1
 * Change composer version constraint for `gdbots/pbj` to `~1.1|~2.0`.
 * Use `gdbots/schemas` v1.4.1
