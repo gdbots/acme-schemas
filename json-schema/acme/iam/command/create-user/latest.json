@@ -190,12 +190,13 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/user"
+          "$ref": "#/definitions/node"
         }
       ],
       "pbj": {
         "type": "message",
-        "rule": "single"
+        "rule": "single",
+        "overridable": true
       }
     }
   },
@@ -221,11 +222,11 @@
         }
       ]
     },
-    "user": {
+    "node": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/iam/mixin/user/1-0-0.json#"
+          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
         }
       ]
     }

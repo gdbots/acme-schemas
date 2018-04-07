@@ -170,12 +170,13 @@
       "type": "object",
       "anyOf": [
         {
-          "$ref": "#/definitions/role"
+          "$ref": "#/definitions/node"
         }
       ],
       "pbj": {
         "type": "message",
-        "rule": "single"
+        "rule": "single",
+        "overridable": true
       }
     },
     "ctx_ip_geo": {
@@ -323,11 +324,11 @@
         }
       ]
     },
-    "role": {
+    "node": {
       "type": "object",
       "anyOf": [
         {
-          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/iam/mixin/role/1-0-0.json#"
+          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/ncr/mixin/node/1-0-0.json#"
         }
       ]
     },
