@@ -4,7 +4,6 @@ import GdbotsEnrichmentsIpToGeoV1Mixin from '@gdbots/schemas/gdbots/enrichments/
 import GdbotsEnrichmentsTimePartingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-parting/TimePartingV1Mixin';
 import GdbotsEnrichmentsTimeSamplingV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/time-sampling/TimeSamplingV1Mixin';
 import GdbotsEnrichmentsUaParserV1Mixin from '@gdbots/schemas/gdbots/enrichments/mixin/ua-parser/UaParserV1Mixin';
-import GdbotsIamUserCreatedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user-created/UserCreatedV1Mixin';
 import GdbotsNcrNodeCreatedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-created/NodeCreatedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
@@ -24,7 +23,6 @@ export default class UserCreatedV1 extends Message {
       [
         GdbotsPbjxEventV1Mixin.create(),
         GdbotsNcrNodeCreatedV1Mixin.create(),
-        GdbotsIamUserCreatedV1Mixin.create(),
         GdbotsAnalyticsTrackedMessageV1Mixin.create(),
         GdbotsEnrichmentsIpToGeoV1Mixin.create(),
         GdbotsEnrichmentsTimePartingV1Mixin.create(),

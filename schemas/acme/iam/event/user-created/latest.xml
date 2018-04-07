@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:node-created:v1</curie-major>
-      <curie-major>gdbots:iam:mixin:user-created:v1</curie-major>
       <curie-major>gdbots:analytics:mixin:tracked-message:v1</curie-major>
       <curie-major>gdbots:enrichments:mixin:ip-to-geo:v1</curie-major>
       <curie-major>gdbots:enrichments:mixin:time-parting:v1</curie-major>

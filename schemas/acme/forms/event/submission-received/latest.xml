@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:acme:forms:event:submission-received:1-0-0">
+    <fields>
+      <field name="form_ref" type="identifier" required="true">
+        <php-options>
+          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
+          <class-name>NodeRef::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
+          <class-proto>NodeRef</class-proto>
+        </js-options>
+      </field>
+      <field name="first_name" type="string"/>
+      <field name="last_name" type="string"/>
+      <field name="email" type="string" format="email"/>
+      <field name="email_domain" type="string" format="hostname"/>
+      <field name="address" type="message">
+        <any-of>
+          <curie>gdbots:geo::address</curie>
+        </any-of>
+      </field>
+      <field name="phone" type="string" pattern="^\+?[1-9]\d{1,14}$" max="20" rule="map">
+        <description>
+          A general format for international telephone numbers.
+          @link https://en.wikipedia.org/wiki/E.164
+        </description>
+      </field>
+      <field name="dob" type="date"/>
+      <field name="age" type="tiny-int" max="120">
+        <description>
+          The "age" is generally populated if "dob" is present by using the difference of
+          "dob" and "occurred_at" to determine the age at the time of the submission.
+        </description>
+      </field>
+      <field name="height" type="tiny-int" max="120">
+        <description>The person's physical height recorded in inches.</description>
+      </field>
+      <field name="gender" type="int-enum">
+        <default>0</default>
+        <enum id="gdbots:common:gender"/>
+      </field>
+      <field name="sexual_orientation" type="string-enum">
+        <enum id="gdbots:common:sexual-orientation"/>
+      </field>
+      <field name="story" type="text"/>
+      <field name="file_ids" type="identifier" rule="set">
+        <php-options>
+          <imports>use Gdbots\Schemas\Files\FileId;</imports>
+          <class-name>FileId::class</class-name>
+        </php-options>
+        <js-options>
+          <imports>import FileId from '@gdbots/schemas/gdbots/files/FileId';</imports>
+          <class-proto>FileId</class-proto>
+        </js-options>
+      </field>
+      <field name="networks" type="string" pattern="^[\w\.-]+$" max="50" rule="map">
+        <description>
+          Networks is a map that contains handles/usernames on a social network.
+          E.g. facebook:homer, twitter:stackoverflow, youtube:coltrane78.
+        </description>
+      </field>
+      <field name="mentions" type="string" pattern="^[\w\.-]+$" max="50" rule="set">
+        <description>
+          Mentions contains the usernames extracted from the "networks" map and possibly
+          parsed from other text fields. Makes it possible to search @mentions.
+        </description>
+      </field>
+      <field name="ppid" type="string" pattern="^[\w\/\.:-]+$">
+        <description>Publisher provided identifier (PPID)</description>
+      </field>
+      <field name="hashtags" type="string" format="hashtag" rule="set"/>
+      <field name="cf" type="dynamic-field" rule="list">
+        <description>Contains all of the answers submitted from the custom fields on the form.</description>
+      </field>
+      <field name="s256" type="tiny-int">
+        <description>
+          "s256" means shard 256. Used to distribute read/write from storage and speed up
+          replay/reindex processes. It can also be used to distribute workload in front end
+          user interfaces or notifications (like isles in a grocery store).
+          This value should NOT change once set.
+        </description>
+      </field>
+      <field name="s32" type="tiny-int">
+        <description>
+          "s32" means shard 32. See field "s256" for explanation.
+        </description>
+      </field>
+      <field name="s16" type="tiny-int">
+        <description>
+          "s16" means shard 16. See field "s256" for explanation.
+        </description>
+      </field>
+    </fields>
+
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
+      <curie-major>gdbots:analytics:mixin:tracked-message:v1</curie-major>
+      <curie-major>gdbots:common:mixin:taggable:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ip-to-geo:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-parting:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:time-sampling:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:ua-parser:v1</curie-major>
+      <curie-major>gdbots:enrichments:mixin:utm:v1</curie-major>
+      <curie-major>gdbots:pbjx:mixin:indexed:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>

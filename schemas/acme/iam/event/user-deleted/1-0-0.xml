@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:node-deleted:v1</curie-major>
-      <curie-major>gdbots:iam:mixin:user-deleted:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

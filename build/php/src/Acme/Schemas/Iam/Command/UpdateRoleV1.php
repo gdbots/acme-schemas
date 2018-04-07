@@ -4,8 +4,6 @@ namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Iam\Mixin\UpdateRole\UpdateRoleV1 as GdbotsIamUpdateRoleV1;
-use Gdbots\Schemas\Iam\Mixin\UpdateRole\UpdateRoleV1Mixin as GdbotsIamUpdateRoleV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\UpdateNode\UpdateNodeV1 as GdbotsNcrUpdateNodeV1;
 use Gdbots\Schemas\Ncr\Mixin\UpdateNode\UpdateNodeV1Mixin as GdbotsNcrUpdateNodeV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
@@ -15,8 +13,7 @@ use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait
 final class UpdateRoleV1 extends AbstractMessage implements
     UpdateRole,
     GdbotsPbjxCommandV1,
-    GdbotsNcrUpdateNodeV1,
-    GdbotsIamUpdateRoleV1
+    GdbotsNcrUpdateNodeV1
 {
     use GdbotsPbjxCommandV1Trait;
 
@@ -30,7 +27,6 @@ final class UpdateRoleV1 extends AbstractMessage implements
             [
                 GdbotsPbjxCommandV1Mixin::create(),
                 GdbotsNcrUpdateNodeV1Mixin::create(),
-                GdbotsIamUpdateRoleV1Mixin::create(),
             ]
         );
     }

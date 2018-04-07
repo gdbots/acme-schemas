@@ -4,8 +4,6 @@ namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1 as GdbotsIamCreateUserV1;
-use Gdbots\Schemas\Iam\Mixin\CreateUser\CreateUserV1Mixin as GdbotsIamCreateUserV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1 as GdbotsNcrCreateNodeV1;
 use Gdbots\Schemas\Ncr\Mixin\CreateNode\CreateNodeV1Mixin as GdbotsNcrCreateNodeV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
@@ -15,8 +13,7 @@ use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait
 final class CreateUserV1 extends AbstractMessage implements
     CreateUser,
     GdbotsPbjxCommandV1,
-    GdbotsNcrCreateNodeV1,
-    GdbotsIamCreateUserV1
+    GdbotsNcrCreateNodeV1
 {
     use GdbotsPbjxCommandV1Trait;
 
@@ -30,7 +27,6 @@ final class CreateUserV1 extends AbstractMessage implements
             [
                 GdbotsPbjxCommandV1Mixin::create(),
                 GdbotsNcrCreateNodeV1Mixin::create(),
-                GdbotsIamCreateUserV1Mixin::create(),
             ]
         );
     }

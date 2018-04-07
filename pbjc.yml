@@ -1,6 +1,7 @@
 domain: http://acme-schemas.gdbots.io
 
 namespaces:
+  - acme:forms
   - acme:iam
 
 languages:

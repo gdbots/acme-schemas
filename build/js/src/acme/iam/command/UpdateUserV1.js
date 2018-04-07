@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/command/update-user/1-0-0.json#
-import GdbotsIamUpdateUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/update-user/UpdateUserV1Mixin';
 import GdbotsNcrUpdateNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/update-node/UpdateNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
@@ -19,7 +18,6 @@ export default class UpdateUserV1 extends Message {
       [
         GdbotsPbjxCommandV1Mixin.create(),
         GdbotsNcrUpdateNodeV1Mixin.create(),
-        GdbotsIamUpdateUserV1Mixin.create(),
       ],
     );
   }

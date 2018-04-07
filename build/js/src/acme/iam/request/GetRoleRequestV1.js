@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-role-request/1-0-0.json#
-import GdbotsIamGetRoleRequestV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-role-request/GetRoleRequestV1Mixin';
 import GdbotsNcrGetNodeRequestV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/get-node-request/GetNodeRequestV1Mixin';
 import GdbotsPbjxRequestV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Mixin';
 import GdbotsPbjxRequestV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/request/RequestV1Trait';
@@ -19,7 +18,6 @@ export default class GetRoleRequestV1 extends Message {
       [
         GdbotsPbjxRequestV1Mixin.create(),
         GdbotsNcrGetNodeRequestV1Mixin.create(),
-        GdbotsIamGetRoleRequestV1Mixin.create(),
       ],
     );
   }

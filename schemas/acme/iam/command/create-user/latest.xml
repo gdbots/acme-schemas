@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:create-node:v1</curie-major>
-      <curie-major>gdbots:iam:mixin:create-user:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>
