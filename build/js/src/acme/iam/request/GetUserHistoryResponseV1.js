@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-user-history-response/1-0-0.json#
-import GdbotsIamGetUserHistoryResponseV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/get-user-history-response/GetUserHistoryResponseV1Mixin';
 import GdbotsPbjxGetEventsResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/get-events-response/GetEventsResponseV1Mixin';
 import GdbotsPbjxResponseV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Mixin';
 import GdbotsPbjxResponseV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/response/ResponseV1Trait';
@@ -19,7 +18,6 @@ export default class GetUserHistoryResponseV1 extends Message {
       [
         GdbotsPbjxResponseV1Mixin.create(),
         GdbotsPbjxGetEventsResponseV1Mixin.create(),
-        GdbotsIamGetUserHistoryResponseV1Mixin.create(),
       ],
     );
   }

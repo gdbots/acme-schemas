@@ -4,21 +4,6 @@
     xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
 
   <schema id="pbj:acme:iam:node:user:1-0-0">
-    <fields>
-      <field name="_id" type="identifier" required="true">
-        <php-options>
-          <imports>use Acme\Schemas\Iam\UserId;</imports>
-          <class-name>UserId::class</class-name>
-          <default>function() { return UserId::generate(); }</default>
-        </php-options>
-        <js-options>
-          <imports>import UserId from '@gdbots/acme-schemas/acme/iam/UserId';</imports>
-          <class-proto>UserId</class-proto>
-          <default>() => UserId.generate()</default>
-        </js-options>
-      </field>
-    </fields>
-
     <mixins>
       <curie-major>gdbots:ncr:mixin:node:v1</curie-major>
       <curie-major>gdbots:iam:mixin:user:v1</curie-major>

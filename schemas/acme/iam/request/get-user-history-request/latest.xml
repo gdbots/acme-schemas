@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:request:v1</curie-major>
       <curie-major>gdbots:pbjx:mixin:get-events-request:v1</curie-major>
-      <curie-major>gdbots:iam:mixin:get-user-history-request:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

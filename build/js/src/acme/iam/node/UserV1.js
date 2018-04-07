@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/node/user/1-0-0.json#
-import Fb from '@gdbots/pbj/FieldBuilder';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsIamUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Mixin';
 import GdbotsIamUserV1Trait from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Trait';
@@ -9,8 +8,6 @@ import GdbotsNcrNodeV1Trait from '@gdbots/schemas/gdbots/ncr/mixin/node/NodeV1Tr
 import Message from '@gdbots/pbj/Message';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
 import Schema from '@gdbots/pbj/Schema';
-import T from '@gdbots/pbj/types';
-import UserId from '@gdbots/acme-schemas/acme/iam/UserId';
 
 export default class UserV1 extends Message {
   /**
@@ -20,13 +17,7 @@ export default class UserV1 extends Message {
    */
   static defineSchema() {
     return new Schema('pbj:acme:iam:node:user:1-0-0', UserV1,
-      [
-        Fb.create('_id', T.IdentifierType.create())
-          .required()
-          .withDefault(() => UserId.generate())
-          .classProto(UserId)
-          .build(),
-      ],
+      [],
       [
         GdbotsNcrNodeV1Mixin.create(),
         GdbotsIamUserV1Mixin.create(),

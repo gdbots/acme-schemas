@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/command/create-user/1-0-0.json#
-import GdbotsIamCreateUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/create-user/CreateUserV1Mixin';
 import GdbotsNcrCreateNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/create-node/CreateNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
@@ -19,7 +18,6 @@ export default class CreateUserV1 extends Message {
       [
         GdbotsPbjxCommandV1Mixin.create(),
         GdbotsNcrCreateNodeV1Mixin.create(),
-        GdbotsIamCreateUserV1Mixin.create(),
       ],
     );
   }

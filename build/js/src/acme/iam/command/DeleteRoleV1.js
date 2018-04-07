@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/command/delete-role/1-0-0.json#
-import GdbotsIamDeleteRoleV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/delete-role/DeleteRoleV1Mixin';
 import GdbotsNcrDeleteNodeV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/delete-node/DeleteNodeV1Mixin';
 import GdbotsPbjxCommandV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Mixin';
 import GdbotsPbjxCommandV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/command/CommandV1Trait';
@@ -19,7 +18,6 @@ export default class DeleteRoleV1 extends Message {
       [
         GdbotsPbjxCommandV1Mixin.create(),
         GdbotsNcrDeleteNodeV1Mixin.create(),
-        GdbotsIamDeleteRoleV1Mixin.create(),
       ],
     );
   }

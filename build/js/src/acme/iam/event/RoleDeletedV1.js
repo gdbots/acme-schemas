@@ -1,5 +1,4 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/event/role-deleted/1-0-0.json#
-import GdbotsIamRoleDeletedV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/role-deleted/RoleDeletedV1Mixin';
 import GdbotsNcrNodeDeletedV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/node-deleted/NodeDeletedV1Mixin';
 import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
 import GdbotsPbjxEventV1Trait from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Trait';
@@ -19,7 +18,6 @@ export default class RoleDeletedV1 extends Message {
       [
         GdbotsPbjxEventV1Mixin.create(),
         GdbotsNcrNodeDeletedV1Mixin.create(),
-        GdbotsIamRoleDeletedV1Mixin.create(),
       ],
     );
   }

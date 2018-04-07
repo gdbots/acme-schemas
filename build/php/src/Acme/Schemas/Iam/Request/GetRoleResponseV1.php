@@ -4,8 +4,6 @@ namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Iam\Mixin\GetRoleResponse\GetRoleResponseV1 as GdbotsIamGetRoleResponseV1;
-use Gdbots\Schemas\Iam\Mixin\GetRoleResponse\GetRoleResponseV1Mixin as GdbotsIamGetRoleResponseV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1 as GdbotsNcrGetNodeResponseV1;
 use Gdbots\Schemas\Ncr\Mixin\GetNodeResponse\GetNodeResponseV1Mixin as GdbotsNcrGetNodeResponseV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1 as GdbotsPbjxResponseV1;
@@ -15,8 +13,7 @@ use Gdbots\Schemas\Pbjx\Mixin\Response\ResponseV1Trait as GdbotsPbjxResponseV1Tr
 final class GetRoleResponseV1 extends AbstractMessage implements
     GetRoleResponse,
     GdbotsPbjxResponseV1,
-    GdbotsNcrGetNodeResponseV1,
-    GdbotsIamGetRoleResponseV1
+    GdbotsNcrGetNodeResponseV1
 {
     use GdbotsPbjxResponseV1Trait;
 
@@ -30,7 +27,6 @@ final class GetRoleResponseV1 extends AbstractMessage implements
             [
                 GdbotsPbjxResponseV1Mixin::create(),
                 GdbotsNcrGetNodeResponseV1Mixin::create(),
-                GdbotsIamGetRoleResponseV1Mixin::create(),
             ]
         );
     }

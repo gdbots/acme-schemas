@@ -7,7 +7,6 @@
     <mixins>
       <curie-major>gdbots:pbjx:mixin:event:v1</curie-major>
       <curie-major>gdbots:ncr:mixin:node-updated:v1</curie-major>
-      <curie-major>gdbots:iam:mixin:user-updated:v1</curie-major>
     </mixins>
   </schema>
 </pbj-schema>

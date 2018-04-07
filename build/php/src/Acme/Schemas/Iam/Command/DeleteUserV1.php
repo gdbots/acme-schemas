@@ -4,8 +4,6 @@ namespace Acme\Schemas\Iam\Command;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Iam\Mixin\DeleteUser\DeleteUserV1 as GdbotsIamDeleteUserV1;
-use Gdbots\Schemas\Iam\Mixin\DeleteUser\DeleteUserV1Mixin as GdbotsIamDeleteUserV1Mixin;
 use Gdbots\Schemas\Ncr\Mixin\DeleteNode\DeleteNodeV1 as GdbotsNcrDeleteNodeV1;
 use Gdbots\Schemas\Ncr\Mixin\DeleteNode\DeleteNodeV1Mixin as GdbotsNcrDeleteNodeV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1 as GdbotsPbjxCommandV1;
@@ -15,8 +13,7 @@ use Gdbots\Schemas\Pbjx\Mixin\Command\CommandV1Trait as GdbotsPbjxCommandV1Trait
 final class DeleteUserV1 extends AbstractMessage implements
     DeleteUser,
     GdbotsPbjxCommandV1,
-    GdbotsNcrDeleteNodeV1,
-    GdbotsIamDeleteUserV1
+    GdbotsNcrDeleteNodeV1
 {
     use GdbotsPbjxCommandV1Trait;
 
@@ -30,7 +27,6 @@ final class DeleteUserV1 extends AbstractMessage implements
             [
                 GdbotsPbjxCommandV1Mixin::create(),
                 GdbotsNcrDeleteNodeV1Mixin::create(),
-                GdbotsIamDeleteUserV1Mixin::create(),
             ]
         );
     }
