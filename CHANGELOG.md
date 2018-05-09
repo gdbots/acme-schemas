@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.2.1
+* Use `gdbots/schemas` v1.5.1.
+* __Add Schemas:__
+  * `acme:iam:command:patch-user`
+  * `acme:iam:command:patch-users`
+  * `acme:iam:event:user-patched`
+
+
 ## v1.2.0
 * Use `gdbots/schemas` v1.5.0 and eliminate use of iam mixins for ncr crud operations.
 * __Delete Schemas:__

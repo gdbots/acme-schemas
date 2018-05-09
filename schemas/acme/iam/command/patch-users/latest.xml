@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pbj-schema xmlns="http://gdbots.io/pbj/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://gdbots.io/pbj/xsd http://gdbots.io/pbj/xsd/schema.xsd">
+
+  <schema id="pbj:acme:iam:command:patch-users:1-0-0">
+    <fields>
+      <field name="is_staff" type="boolean"/>
+    </fields>
+    <mixins>
+      <curie-major>gdbots:pbjx:mixin:command:v1</curie-major>
+      <curie-major>gdbots:ncr:mixin:patch-nodes:v1</curie-major>
+    </mixins>
+  </schema>
+</pbj-schema>
