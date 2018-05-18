@@ -66,7 +66,6 @@
     'acme:iam:event:user-updated' => 'Acme\Schemas\Iam\Event\UserUpdatedV1',
     'acme:iam:node:alexa-app' => 'Acme\Schemas\Iam\Node\AlexaAppV1',
     'acme:iam:node:android-app' => 'Acme\Schemas\Iam\Node\AndroidAppV1',
-    'acme:iam:node:app' => 'Acme\Schemas\Iam\Node\AppV1',
     'acme:iam:node:apple-news-app' => 'Acme\Schemas\Iam\Node\AppleNewsAppV1',
     'acme:iam:node:browser-app' => 'Acme\Schemas\Iam\Node\BrowserAppV1',
     'acme:iam:node:ios-app' => 'Acme\Schemas\Iam\Node\IosAppV1',

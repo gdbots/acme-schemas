@@ -65,7 +65,6 @@ import '@gdbots/acme-schemas/acme/iam/event/UserRolesRevokedV1';
 import '@gdbots/acme-schemas/acme/iam/event/UserUpdatedV1';
 import '@gdbots/acme-schemas/acme/iam/node/AlexaAppV1';
 import '@gdbots/acme-schemas/acme/iam/node/AndroidAppV1';
-import '@gdbots/acme-schemas/acme/iam/node/AppV1';
 import '@gdbots/acme-schemas/acme/iam/node/AppleNewsAppV1';
 import '@gdbots/acme-schemas/acme/iam/node/BrowserAppV1';
 import '@gdbots/acme-schemas/acme/iam/node/IosAppV1';
