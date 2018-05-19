@@ -1,6 +1,34 @@
 # CHANGELOG
 
 
+## v1.2.2
+* Use `gdbots/schemas` v1.5.2.
+* __Add Schemas:__
+  * `acme:iam:command:create-app`
+  * `acme:iam:command:delete-app`
+  * `acme:iam:command:grant-roles-to-app`
+  * `acme:iam:command:revoke-roles-from-app`
+  * `acme:iam:command:update-app`
+  * `acme:iam:event:app-created`
+  * `acme:iam:event:app-deleted`
+  * `acme:iam:event:app-roles-granted`
+  * `acme:iam:event:app-roles-revoked`
+  * `acme:iam:event:app-updated`
+  * `acme:iam:node:alexa-app`
+  * `acme:iam:node:android-app`
+  * `acme:iam:node:apple-news-app`
+  * `acme:iam:node:browser-app`
+  * `acme:iam:node:ios-app`
+  * `acme:iam:node:slack-app`
+  * `acme:iam:node:sms-app`
+  * `acme:iam:request:get-app-history-request`
+  * `acme:iam:request:get-app-history-response`
+  * `acme:iam:request:get-app-request`
+  * `acme:iam:request:get-app-response`
+  * `acme:iam:request:list-all-apps-request`
+  * `acme:iam:request:list-all-apps-response`
+
+
 ## v1.2.1
 * Use `gdbots/schemas` v1.5.1.
 * __Add Schemas:__
