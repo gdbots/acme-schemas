@@ -21,10 +21,10 @@
   * `acme:iam:node:ios-app`
   * `acme:iam:node:slack-app`
   * `acme:iam:node:sms-app`
-  * `acme:iam:request:get-app-request`
-  * `acme:iam:request:get-app-response`
   * `acme:iam:request:get-app-history-request`
   * `acme:iam:request:get-app-history-response`
+  * `acme:iam:request:get-app-request`
+  * `acme:iam:request:get-app-response`
   * `acme:iam:request:list-all-apps-request`
   * `acme:iam:request:list-all-apps-response`
 
