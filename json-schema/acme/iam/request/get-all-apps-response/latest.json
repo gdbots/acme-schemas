@@ -1,12 +1,12 @@
 {
-  "id": "http://acme-schemas.gdbots.io/json-schema/acme/iam/request/list-all-apps-response/1-0-0.json#",
+  "id": "http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-all-apps-response/1-0-0.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "_schema": {
       "type": "string",
       "pattern": "^pbj:([a-z0-9-]+):([a-z0-9\\.-]+):([a-z0-9-]+)?:([a-z0-9-]+):([0-9]+-[0-9]+-[0-9]+)$",
-      "default": "pbj:acme:iam:request:list-all-apps-response:1-0-0"
+      "default": "pbj:acme:iam:request:get-all-apps-response:1-0-0"
     },
     "response_id": {
       "type": "string",
@@ -101,19 +101,17 @@
         "rule": "single"
       }
     },
-    "apps": {
+    "nodes": {
       "type": "array",
       "items": [
         {
-          "type": "string",
-          "pattern": "^[\\w\\/\\.:-]+$"
+          "$ref": "#/definitions/app"
         }
       ],
-      "uniqueItems": true,
       "additionalProperties": false,
       "pbj": {
-        "type": "identifier",
-        "rule": "set"
+        "type": "message",
+        "rule": "list"
       }
     }
   },
@@ -127,6 +125,14 @@
       "anyOf": [
         {
           "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/pbjx/mixin/request/1-0-0.json#"
+        }
+      ]
+    },
+    "app": {
+      "type": "object",
+      "anyOf": [
+        {
+          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/iam/mixin/app/1-0-0.json#"
         }
       ]
     }
