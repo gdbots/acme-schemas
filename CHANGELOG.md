@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v1.2.3
+* Use `gdbots/schemas` v1.5.3.
+* __Add Schemas:__
+  * `acme:iam:request:get-all-apps-request`
+  * `acme:iam:request:get-all-apps-response`
+* __Delete Schemas:__ _(we actually need the full node, not just node ref so changed message, no use in any known universe so deleting)
+  * `acme:iam:request:list-all-apps-request`
+  * `acme:iam:request:list-all-apps-response`
+
+
 ## v1.2.2
 * Use `gdbots/schemas` v1.5.2.
 * __Add Schemas:__

@@ -1,19 +1,19 @@
 <?php
-// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/list-all-apps-request/1-0-0.json#
+// @link http://acme-schemas.gdbots.io/json-schema/acme/iam/request/get-all-apps-request/1-0-0.json#
 namespace Acme\Schemas\Iam\Request;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Iam\Mixin\ListAllAppsRequest\ListAllAppsRequestV1 as GdbotsIamListAllAppsRequestV1;
-use Gdbots\Schemas\Iam\Mixin\ListAllAppsRequest\ListAllAppsRequestV1Mixin as GdbotsIamListAllAppsRequestV1Mixin;
+use Gdbots\Schemas\Iam\Mixin\GetAllAppsRequest\GetAllAppsRequestV1 as GdbotsIamGetAllAppsRequestV1;
+use Gdbots\Schemas\Iam\Mixin\GetAllAppsRequest\GetAllAppsRequestV1Mixin as GdbotsIamGetAllAppsRequestV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1 as GdbotsPbjxRequestV1;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Mixin as GdbotsPbjxRequestV1Mixin;
 use Gdbots\Schemas\Pbjx\Mixin\Request\RequestV1Trait as GdbotsPbjxRequestV1Trait;
 
-final class ListAllAppsRequestV1 extends AbstractMessage implements
-    ListAllAppsRequest,
+final class GetAllAppsRequestV1 extends AbstractMessage implements
+    GetAllAppsRequest,
     GdbotsPbjxRequestV1,
-    GdbotsIamListAllAppsRequestV1
+    GdbotsIamGetAllAppsRequestV1
 {
     use GdbotsPbjxRequestV1Trait;
 
@@ -22,11 +22,11 @@ final class ListAllAppsRequestV1 extends AbstractMessage implements
      */
     protected static function defineSchema()
     {
-        return new Schema('pbj:acme:iam:request:list-all-apps-request:1-0-0', __CLASS__,
+        return new Schema('pbj:acme:iam:request:get-all-apps-request:1-0-0', __CLASS__,
             [],
             [
                 GdbotsPbjxRequestV1Mixin::create(),
-                GdbotsIamListAllAppsRequestV1Mixin::create(),
+                GdbotsIamGetAllAppsRequestV1Mixin::create(),
             ]
         );
     }
