@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v1.2.4
+* Use `gdbots/schemas` v1.5.4.
+* __Add Schemas:__
+  * `acme:iam:node:email-app`
+
+
 ## v1.2.3
 * Use `gdbots/schemas` v1.5.3.
 * __Add Schemas:__

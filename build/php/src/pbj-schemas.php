@@ -74,6 +74,7 @@
     'acme:iam:node:android-app' => 'Acme\Schemas\Iam\Node\AndroidAppV1',
     'acme:iam:node:apple-news-app' => 'Acme\Schemas\Iam\Node\AppleNewsAppV1',
     'acme:iam:node:browser-app' => 'Acme\Schemas\Iam\Node\BrowserAppV1',
+    'acme:iam:node:email-app' => 'Acme\Schemas\Iam\Node\EmailAppV1',
     'acme:iam:node:ios-app' => 'Acme\Schemas\Iam\Node\IosAppV1',
     'acme:iam:node:role' => 'Acme\Schemas\Iam\Node\RoleV1',
     'acme:iam:node:slack-app' => 'Acme\Schemas\Iam\Node\SlackAppV1',
