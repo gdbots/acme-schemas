@@ -1,6 +1,6 @@
 {
   "name": "@gdbots/acme-schemas",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Sample schemas for common gdbots services.",
   "repository": {
     "type": "git",
