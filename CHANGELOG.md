@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v1.2.7
+* Use `gdbots/schemas` v1.5.7.
+
+
 ## v1.2.6
 * Use `gdbots/schemas` v1.5.6.
 
