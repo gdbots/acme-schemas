@@ -1,6 +1,6 @@
 {
   "name": "@gdbots/acme-schemas",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Sample schemas for common gdbots services.",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "module": "./index.js",
   "jsnext:main": "./index.js",
   "dependencies": {
-    "@gdbots/schemas": "1.5.11"
+    "@gdbots/schemas": "1.5.12"
   },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0.0",
