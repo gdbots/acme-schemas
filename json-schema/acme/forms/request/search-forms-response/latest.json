@@ -244,6 +244,9 @@
         },
         {
           "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/forms/mixin/form/1-0-2.json#"
+        },
+        {
+          "$ref": "http://acme-schemas.gdbots.io/json-schema/gdbots/forms/mixin/form/1-0-3.json#"
         }
       ]
     }
