@@ -5,16 +5,7 @@
 
   <schema id="pbj:acme:forms:event:submission-received:1-0-0">
     <fields>
-      <field name="form_ref" type="identifier" required="true">
-        <php-options>
-          <imports>use Gdbots\Schemas\Ncr\NodeRef;</imports>
-          <class-name>NodeRef::class</class-name>
-        </php-options>
-        <js-options>
-          <imports>import NodeRef from '@gdbots/schemas/gdbots/ncr/NodeRef';</imports>
-          <class-proto>NodeRef</class-proto>
-        </js-options>
-      </field>
+      <field name="form_ref" type="node-ref" required="true"/>
       <field name="first_name" type="string"/>
       <field name="last_name" type="string"/>
       <field name="email" type="string" format="email"/>
@@ -50,11 +41,11 @@
       <field name="story" type="text"/>
       <field name="file_ids" type="identifier" rule="set">
         <php-options>
-          <imports>use Gdbots\Schemas\Files\FileId;</imports>
+          <imports>use Gdbots\Schemas\Common\FileId;</imports>
           <class-name>FileId::class</class-name>
         </php-options>
         <js-options>
-          <imports>import FileId from '@gdbots/schemas/gdbots/files/FileId';</imports>
+          <imports>import FileId from '@gdbots/schemas/gdbots/common/FileId';</imports>
           <class-proto>FileId</class-proto>
         </js-options>
       </field>

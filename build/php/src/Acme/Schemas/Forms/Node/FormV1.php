@@ -1,68 +1,241 @@
 <?php
+declare(strict_types=1);
+
 // @link http://acme-schemas.gdbots.io/json-schema/acme/forms/node/form/1-0-0.json#
 namespace Acme\Schemas\Forms\Node;
 
 use Gdbots\Pbj\AbstractMessage;
+use Gdbots\Pbj\Enum\Format;
+use Gdbots\Pbj\FieldBuilder as Fb;
 use Gdbots\Pbj\Schema;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
-use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
-use Gdbots\Schemas\Forms\Mixin\Form\FormV1 as GdbotsFormsFormV1;
-use Gdbots\Schemas\Forms\Mixin\Form\FormV1Mixin as GdbotsFormsFormV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Expirable\ExpirableV1 as GdbotsNcrExpirableV1;
-use Gdbots\Schemas\Ncr\Mixin\Expirable\ExpirableV1Mixin as GdbotsNcrExpirableV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1 as GdbotsNcrIndexedV1;
-use Gdbots\Schemas\Ncr\Mixin\Indexed\IndexedV1Mixin as GdbotsNcrIndexedV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Lockable\LockableV1 as GdbotsNcrLockableV1;
-use Gdbots\Schemas\Ncr\Mixin\Lockable\LockableV1Mixin as GdbotsNcrLockableV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1 as GdbotsNcrNodeV1;
-use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Mixin as GdbotsNcrNodeV1Mixin;
+use Gdbots\Pbj\Type as T;
+use Gdbots\Pbj\WellKnown\UuidIdentifier;
+use Gdbots\Schemas\Common\FileId;
+use Gdbots\Schemas\Forms\Enum\PiiImpact;
+use Gdbots\Schemas\Ncr\Enum\NodeStatus;
 use Gdbots\Schemas\Ncr\Mixin\Node\NodeV1Trait as GdbotsNcrNodeV1Trait;
-use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1 as GdbotsNcrPublishableV1;
-use Gdbots\Schemas\Ncr\Mixin\Publishable\PublishableV1Mixin as GdbotsNcrPublishableV1Mixin;
-use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1 as GdbotsNcrSluggableV1;
-use Gdbots\Schemas\Ncr\Mixin\Sluggable\SluggableV1Mixin as GdbotsNcrSluggableV1Mixin;
 
-final class FormV1 extends AbstractMessage implements
-    Form,
-    GdbotsNcrNodeV1,
-    GdbotsFormsFormV1,
-    GdbotsCommonTaggableV1,
-    GdbotsNcrExpirableV1,
-    GdbotsNcrIndexedV1,
-    GdbotsNcrLockableV1,
-    GdbotsNcrPublishableV1,
-    GdbotsNcrSluggableV1
+final class FormV1 extends AbstractMessage
 {
+    const SCHEMA_ID = 'pbj:acme:forms:node:form:1-0-0';
+    const SCHEMA_CURIE = 'acme:forms:node:form';
+    const SCHEMA_CURIE_MAJOR = 'acme:forms:node:form:v1';
+
+    const MIXINS = [
+      'gdbots:ncr:mixin:node:v1',
+      'gdbots:ncr:mixin:node',
+      'gdbots:forms:mixin:form:v1',
+      'gdbots:forms:mixin:form',
+      'gdbots:common:mixin:taggable:v1',
+      'gdbots:common:mixin:taggable',
+      'gdbots:ncr:mixin:expirable:v1',
+      'gdbots:ncr:mixin:expirable',
+      'gdbots:ncr:mixin:lockable:v1',
+      'gdbots:ncr:mixin:lockable',
+      'gdbots:ncr:mixin:publishable:v1',
+      'gdbots:ncr:mixin:publishable',
+      'gdbots:ncr:mixin:sluggable:v1',
+      'gdbots:ncr:mixin:sluggable',
+    ];
+
+    const _ID_FIELD = '_id';
+    const STATUS_FIELD = 'status';
+    const ETAG_FIELD = 'etag';
+    const CREATED_AT_FIELD = 'created_at';
+    const CREATOR_REF_FIELD = 'creator_ref';
+    const UPDATED_AT_FIELD = 'updated_at';
+    const UPDATER_REF_FIELD = 'updater_ref';
+    const LAST_EVENT_REF_FIELD = 'last_event_ref';
+    const TITLE_FIELD = 'title';
+    const DESCRIPTION_FIELD = 'description';
+    const THANK_YOU_HEADER_FIELD = 'thank_you_header';
+    const THANK_YOU_TEXT_FIELD = 'thank_you_text';
+    const THANK_YOU_URL_FIELD = 'thank_you_url';
+    const TEMPLATE_FIELD = 'template';
+    const CUSTOM_CODE_FIELD = 'custom_code';
+    const FIELDS_FIELD = 'fields';
+    const HASHTAGS_FIELD = 'hashtags';
+    const DISCLAIMER_FIELD = 'disclaimer';
+    const IMAGE_ID_FIELD = 'image_id';
+    const PII_IMPACT_FIELD = 'pii_impact';
+    const TAGS_FIELD = 'tags';
+    const EXPIRES_AT_FIELD = 'expires_at';
+    const IS_LOCKED_FIELD = 'is_locked';
+    const LOCKED_BY_REF_FIELD = 'locked_by_ref';
+    const PUBLISHED_AT_FIELD = 'published_at';
+    const SLUG_FIELD = 'slug';
+
+    const FIELDS = [
+      self::_ID_FIELD,
+      self::STATUS_FIELD,
+      self::ETAG_FIELD,
+      self::CREATED_AT_FIELD,
+      self::CREATOR_REF_FIELD,
+      self::UPDATED_AT_FIELD,
+      self::UPDATER_REF_FIELD,
+      self::LAST_EVENT_REF_FIELD,
+      self::TITLE_FIELD,
+      self::DESCRIPTION_FIELD,
+      self::THANK_YOU_HEADER_FIELD,
+      self::THANK_YOU_TEXT_FIELD,
+      self::THANK_YOU_URL_FIELD,
+      self::TEMPLATE_FIELD,
+      self::CUSTOM_CODE_FIELD,
+      self::FIELDS_FIELD,
+      self::HASHTAGS_FIELD,
+      self::DISCLAIMER_FIELD,
+      self::IMAGE_ID_FIELD,
+      self::PII_IMPACT_FIELD,
+      self::TAGS_FIELD,
+      self::EXPIRES_AT_FIELD,
+      self::IS_LOCKED_FIELD,
+      self::LOCKED_BY_REF_FIELD,
+      self::PUBLISHED_AT_FIELD,
+      self::SLUG_FIELD,
+    ];
+
     use GdbotsNcrNodeV1Trait;
 
-    /**
-     * @return Schema
-     */
-    protected static function defineSchema()
+    protected static function defineSchema(): Schema
     {
-        return new Schema('pbj:acme:forms:node:form:1-0-0', __CLASS__,
-            [],
+        return new Schema(self::SCHEMA_ID, __CLASS__,
             [
-                GdbotsNcrNodeV1Mixin::create(),
-                GdbotsFormsFormV1Mixin::create(),
-                GdbotsCommonTaggableV1Mixin::create(),
-                GdbotsNcrExpirableV1Mixin::create(),
-                GdbotsNcrIndexedV1Mixin::create(),
-                GdbotsNcrLockableV1Mixin::create(),
-                GdbotsNcrPublishableV1Mixin::create(),
-                GdbotsNcrSluggableV1Mixin::create(),
-            ]
+                /*
+                 * The "_id" value:
+                 * - MUST NOT change for the life of the node.
+                 * - SHOULD be globally unique
+                 * - SHOULD be generated by the app (ideally in default value closure... e.g. UuidIdentifier::generate())
+                 */
+                Fb::create(self::_ID_FIELD, T\IdentifierType::create())
+                    ->required()
+                    ->withDefault(function() { return UuidIdentifier::generate(); })
+                    ->className(UuidIdentifier::class)
+                    ->overridable(true)
+                    ->build(),
+                Fb::create(self::STATUS_FIELD, T\StringEnumType::create())
+                    ->withDefault("draft")
+                    ->className(NodeStatus::class)
+                    ->build(),
+                Fb::create(self::ETAG_FIELD, T\StringType::create())
+                    ->maxLength(100)
+                    ->pattern('^[\w\.:-]+$')
+                    ->build(),
+                Fb::create(self::CREATED_AT_FIELD, T\MicrotimeType::create())
+                    ->build(),
+                /*
+                 * A fully qualified reference to what created this node. This is intentionally a message-ref
+                 * and not a user id because it is often a program that creates nodes, not a user.
+                 */
+                Fb::create(self::CREATOR_REF_FIELD, T\MessageRefType::create())
+                    ->build(),
+                Fb::create(self::UPDATED_AT_FIELD, T\MicrotimeType::create())
+                    ->useTypeDefault(false)
+                    ->build(),
+                /*
+                 * A fully qualified reference to what updated this node. This is intentionally a message-ref
+                 * and not a user id because it is often a program that updates nodes, not a user.
+                 * E.g. "acme:iam:node:app:cli-scheduler" or "acme:iam:node:user:60c71df0-fda8-11e5-bfb9-30342d363854"
+                 */
+                Fb::create(self::UPDATER_REF_FIELD, T\MessageRefType::create())
+                    ->build(),
+                /*
+                 * A reference to the last event that changed the state of this node.
+                 * E.g. "acme:blog:event:article-published:60c71df0-fda8-11e5-bfb9-30342d363854"
+                 */
+                Fb::create(self::LAST_EVENT_REF_FIELD, T\MessageRefType::create())
+                    ->build(),
+                Fb::create(self::TITLE_FIELD, T\StringType::create())
+                    ->build(),
+                /*
+                 * A short description (a few sentences) about this form. This field should
+                 * not have html as it is used in metadata.
+                 */
+                Fb::create(self::DESCRIPTION_FIELD, T\TextType::create())
+                    ->build(),
+                Fb::create(self::THANK_YOU_HEADER_FIELD, T\StringType::create())
+                    ->build(),
+                /*
+                 * A short thank you message (a few sentences) a user will see after
+                 * they submit this form. This field should have little to no html
+                 * as it can be used in various contexts.
+                 */
+                Fb::create(self::THANK_YOU_TEXT_FIELD, T\TextType::create())
+                    ->build(),
+                Fb::create(self::THANK_YOU_URL_FIELD, T\StringType::create())
+                    ->format(Format::URL())
+                    ->build(),
+                Fb::create(self::TEMPLATE_FIELD, T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+                /*
+                 * A map containing (HTML, JavaScript, CSS, etc.) that is injected into
+                 * a template at a named insertion point, e.g. "html_head" or "footer".
+                 */
+                Fb::create(self::CUSTOM_CODE_FIELD, T\TextType::create())
+                    ->asAMap()
+                    ->build(),
+                Fb::create(self::FIELDS_FIELD, T\MessageType::create())
+                    ->asAList()
+                    ->anyOfCuries([
+                        'gdbots:forms:mixin:field',
+                    ])
+                    ->build(),
+                Fb::create(self::HASHTAGS_FIELD, T\StringType::create())
+                    ->asASet()
+                    ->format(Format::HASHTAG())
+                    ->build(),
+                Fb::create(self::DISCLAIMER_FIELD, T\TextType::create())
+                    ->build(),
+                Fb::create(self::IMAGE_ID_FIELD, T\IdentifierType::create())
+                    ->className(FileId::class)
+                    ->build(),
+                Fb::create(self::PII_IMPACT_FIELD, T\StringEnumType::create())
+                    ->className(PiiImpact::class)
+                    ->build(),
+                /*
+                 * Tags is a map that categorizes data or tracks references in
+                 * external systems. The tags names should be consistent and descriptive,
+                 * e.g. fb_user_id:123, salesforce_customer_id:456.
+                 */
+                Fb::create(self::TAGS_FIELD, T\StringType::create())
+                    ->asAMap()
+                    ->pattern('^[\w\/\.:-]+$')
+                    ->build(),
+                Fb::create(self::EXPIRES_AT_FIELD, T\DateTimeType::create())
+                    ->build(),
+                /*
+                 * A node being locked will vary in how it's implemented but the
+                 * general idea is that only the user who locked it can modify it.
+                 */
+                Fb::create(self::IS_LOCKED_FIELD, T\BooleanType::create())
+                    ->build(),
+                /*
+                 * The user (or app) that has "locked" the node.
+                 */
+                Fb::create(self::LOCKED_BY_REF_FIELD, T\NodeRefType::create())
+                    ->build(),
+                Fb::create(self::PUBLISHED_AT_FIELD, T\DateTimeType::create())
+                    ->build(),
+                /*
+                 * The "slug" is a secondary identifier, typically used in a url:
+                 * - MUST be url friendly
+                 * - SHOULD NOT be case sensitive
+                 * - SHOULD be unique within the message curie namespace
+                 * - CAN be changed, but in practice once nodes are published you should avoid it if possible
+                 */
+                Fb::create(self::SLUG_FIELD, T\StringType::create())
+                    ->format(Format::SLUG())
+                    ->build(),
+            ],
+            self::MIXINS
         );
     }
 
-    /**
-     * @return array
-     */
-    public function getUriTemplateVars()
+    public function getUriTemplateVars(): array
     {
         return [
-            '_id' => (string)$this->get('_id'),
-            'slug' => $this->get('slug'),
+            '_id' => $this->fget(self::_ID_FIELD),
+            'slug' => $this->fget(self::SLUG_FIELD),
         ];
     }
 }
