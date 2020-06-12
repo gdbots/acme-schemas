@@ -3,7 +3,7 @@ import isPlainObject from 'lodash/isPlainObject';
 import Message from '@gdbots/pbj/Message';
 import MessageRef from '@gdbots/pbj/well-known/MessageRef';
 import MessageResolver from '@gdbots/pbj/MessageResolver';
-import '@gdbots/schemas';
+import '@gdbots/acme-schemas';
 
 
 test('Can create all messages', async (t) => {

@@ -25,7 +25,7 @@ export default class EmailAppV1 extends Message {
          */
         Fb.create(this._ID_FIELD, T.IdentifierType.create())
           .required()
-          .withDefault(UuidIdentifier.generate)
+          .withDefault(() => UuidIdentifier.generate())
           .classProto(UuidIdentifier)
           .overridable(true)
           .build(),

@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v2.0.1
+* Use `gdbots/schemas` v2.0.1
+
+
 ## v2.0.0
 * Use `gdbots/schemas` v2.0.0
 * Remove all ncr command/events that are now concretely implemented by _gdbots:ncr_ messages.
