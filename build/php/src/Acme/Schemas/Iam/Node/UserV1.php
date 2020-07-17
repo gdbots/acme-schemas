@@ -25,6 +25,8 @@ final class UserV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'gdbots:iam:mixin:user:v1',
       'gdbots:iam:mixin:user',
+      'gdbots:common:mixin:labelable:v1',
+      'gdbots:common:mixin:labelable',
       'gdbots:common:mixin:taggable:v1',
       'gdbots:common:mixin:taggable',
     ];
@@ -47,6 +49,7 @@ final class UserV1 extends AbstractMessage
     const IS_BLOCKED_FIELD = 'is_blocked';
     const IS_STAFF_FIELD = 'is_staff';
     const ROLES_FIELD = 'roles';
+    const LABELS_FIELD = 'labels';
     const TAGS_FIELD = 'tags';
 
     const FIELDS = [
@@ -68,6 +71,7 @@ final class UserV1 extends AbstractMessage
       self::IS_BLOCKED_FIELD,
       self::IS_STAFF_FIELD,
       self::ROLES_FIELD,
+      self::LABELS_FIELD,
       self::TAGS_FIELD,
     ];
 
@@ -165,6 +169,14 @@ final class UserV1 extends AbstractMessage
                  */
                 Fb::create(self::ROLES_FIELD, T\NodeRefType::create())
                     ->asASet()
+                    ->build(),
+                /*
+                 * A set of strings used for categorization or workflow.
+                 * Similar to slack channels, github or gmail labels.
+                 */
+                Fb::create(self::LABELS_FIELD, T\StringType::create())
+                    ->asASet()
+                    ->pattern('^[\w-]+$')
                     ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in

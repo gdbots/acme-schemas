@@ -112,6 +112,14 @@ export default class FormV1 extends Message {
           .classProto(PiiImpact)
           .build(),
         /*
+         * A set of strings used for categorization or workflow.
+         * Similar to slack channels, github or gmail labels.
+         */
+        Fb.create(this.LABELS_FIELD, T.StringType.create())
+          .asASet()
+          .pattern('^[\\w-]+$')
+          .build(),
+        /*
          * Tags is a map that categorizes data or tracks references in
          * external systems. The tags names should be consistent and descriptive,
          * e.g. fb_user_id:123, salesforce_customer_id:456.
@@ -171,6 +179,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'gdbots:forms:mixin:form:v1',
   'gdbots:forms:mixin:form',
+  'gdbots:common:mixin:labelable:v1',
+  'gdbots:common:mixin:labelable',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
   'gdbots:ncr:mixin:expirable:v1',
@@ -203,6 +213,7 @@ M.prototype.HASHTAGS_FIELD = M.HASHTAGS_FIELD = 'hashtags';
 M.prototype.DISCLAIMER_FIELD = M.DISCLAIMER_FIELD = 'disclaimer';
 M.prototype.IMAGE_ID_FIELD = M.IMAGE_ID_FIELD = 'image_id';
 M.prototype.PII_IMPACT_FIELD = M.PII_IMPACT_FIELD = 'pii_impact';
+M.prototype.LABELS_FIELD = M.LABELS_FIELD = 'labels';
 M.prototype.TAGS_FIELD = M.TAGS_FIELD = 'tags';
 M.prototype.EXPIRES_AT_FIELD = M.EXPIRES_AT_FIELD = 'expires_at';
 M.prototype.IS_LOCKED_FIELD = M.IS_LOCKED_FIELD = 'is_locked';
@@ -231,6 +242,7 @@ M.prototype.FIELDS = M.FIELDS = [
   M.DISCLAIMER_FIELD,
   M.IMAGE_ID_FIELD,
   M.PII_IMPACT_FIELD,
+  M.LABELS_FIELD,
   M.TAGS_FIELD,
   M.EXPIRES_AT_FIELD,
   M.IS_LOCKED_FIELD,

@@ -26,6 +26,8 @@ final class FormV1 extends AbstractMessage
       'gdbots:ncr:mixin:node',
       'gdbots:forms:mixin:form:v1',
       'gdbots:forms:mixin:form',
+      'gdbots:common:mixin:labelable:v1',
+      'gdbots:common:mixin:labelable',
       'gdbots:common:mixin:taggable:v1',
       'gdbots:common:mixin:taggable',
       'gdbots:ncr:mixin:expirable:v1',
@@ -58,6 +60,7 @@ final class FormV1 extends AbstractMessage
     const DISCLAIMER_FIELD = 'disclaimer';
     const IMAGE_ID_FIELD = 'image_id';
     const PII_IMPACT_FIELD = 'pii_impact';
+    const LABELS_FIELD = 'labels';
     const TAGS_FIELD = 'tags';
     const EXPIRES_AT_FIELD = 'expires_at';
     const IS_LOCKED_FIELD = 'is_locked';
@@ -86,6 +89,7 @@ final class FormV1 extends AbstractMessage
       self::DISCLAIMER_FIELD,
       self::IMAGE_ID_FIELD,
       self::PII_IMPACT_FIELD,
+      self::LABELS_FIELD,
       self::TAGS_FIELD,
       self::EXPIRES_AT_FIELD,
       self::IS_LOCKED_FIELD,
@@ -191,6 +195,14 @@ final class FormV1 extends AbstractMessage
                     ->build(),
                 Fb::create(self::PII_IMPACT_FIELD, T\StringEnumType::create())
                     ->className(PiiImpact::class)
+                    ->build(),
+                /*
+                 * A set of strings used for categorization or workflow.
+                 * Similar to slack channels, github or gmail labels.
+                 */
+                Fb::create(self::LABELS_FIELD, T\StringType::create())
+                    ->asASet()
+                    ->pattern('^[\w-]+$')
                     ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in

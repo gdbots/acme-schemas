@@ -106,6 +106,14 @@ export default class UserV1 extends Message {
           .asASet()
           .build(),
         /*
+         * A set of strings used for categorization or workflow.
+         * Similar to slack channels, github or gmail labels.
+         */
+        Fb.create(this.LABELS_FIELD, T.StringType.create())
+          .asASet()
+          .pattern('^[\\w-]+$')
+          .build(),
+        /*
          * Tags is a map that categorizes data or tracks references in
          * external systems. The tags names should be consistent and descriptive,
          * e.g. fb_user_id:123, salesforce_customer_id:456.
@@ -130,6 +138,8 @@ M.prototype.MIXINS = M.MIXINS = [
   'gdbots:ncr:mixin:node',
   'gdbots:iam:mixin:user:v1',
   'gdbots:iam:mixin:user',
+  'gdbots:common:mixin:labelable:v1',
+  'gdbots:common:mixin:labelable',
   'gdbots:common:mixin:taggable:v1',
   'gdbots:common:mixin:taggable',
 ];
@@ -152,6 +162,7 @@ M.prototype.NETWORKS_FIELD = M.NETWORKS_FIELD = 'networks';
 M.prototype.IS_BLOCKED_FIELD = M.IS_BLOCKED_FIELD = 'is_blocked';
 M.prototype.IS_STAFF_FIELD = M.IS_STAFF_FIELD = 'is_staff';
 M.prototype.ROLES_FIELD = M.ROLES_FIELD = 'roles';
+M.prototype.LABELS_FIELD = M.LABELS_FIELD = 'labels';
 M.prototype.TAGS_FIELD = M.TAGS_FIELD = 'tags';
 
 M.prototype.FIELDS = M.FIELDS = [
@@ -173,6 +184,7 @@ M.prototype.FIELDS = M.FIELDS = [
   M.IS_BLOCKED_FIELD,
   M.IS_STAFF_FIELD,
   M.ROLES_FIELD,
+  M.LABELS_FIELD,
   M.TAGS_FIELD,
 ];
 
