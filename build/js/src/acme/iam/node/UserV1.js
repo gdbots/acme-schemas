@@ -1,4 +1,5 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/iam/node/user/1-0-0.json#
+import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsIamUserV1Mixin from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Mixin';
 import GdbotsIamUserV1Trait from '@gdbots/schemas/gdbots/iam/mixin/user/UserV1Trait';
@@ -22,6 +23,7 @@ export default class UserV1 extends Message {
         GdbotsNcrNodeV1Mixin.create(),
         GdbotsIamUserV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
+        GdbotsCommonLabelableV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
       ],
     );

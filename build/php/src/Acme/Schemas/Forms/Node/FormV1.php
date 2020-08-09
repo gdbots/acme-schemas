@@ -4,6 +4,8 @@ namespace Acme\Schemas\Forms\Node;
 
 use Gdbots\Pbj\AbstractMessage;
 use Gdbots\Pbj\Schema;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1 as GdbotsCommonLabelableV1;
+use Gdbots\Schemas\Common\Mixin\Labelable\LabelableV1Mixin as GdbotsCommonLabelableV1Mixin;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1 as GdbotsCommonTaggableV1;
 use Gdbots\Schemas\Common\Mixin\Taggable\TaggableV1Mixin as GdbotsCommonTaggableV1Mixin;
 use Gdbots\Schemas\Forms\Mixin\Form\FormV1 as GdbotsFormsFormV1;
@@ -26,6 +28,7 @@ final class FormV1 extends AbstractMessage implements
     Form,
     GdbotsNcrNodeV1,
     GdbotsFormsFormV1,
+    GdbotsCommonLabelableV1,
     GdbotsCommonTaggableV1,
     GdbotsNcrExpirableV1,
     GdbotsNcrIndexedV1,
@@ -45,6 +48,7 @@ final class FormV1 extends AbstractMessage implements
             [
                 GdbotsNcrNodeV1Mixin::create(),
                 GdbotsFormsFormV1Mixin::create(),
+                GdbotsCommonLabelableV1Mixin::create(),
                 GdbotsCommonTaggableV1Mixin::create(),
                 GdbotsNcrExpirableV1Mixin::create(),
                 GdbotsNcrIndexedV1Mixin::create(),
