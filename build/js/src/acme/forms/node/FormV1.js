@@ -1,4 +1,5 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/forms/node/form/1-0-0.json#
+import GdbotsCommonLabelableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/labelable/LabelableV1Mixin';
 import GdbotsCommonTaggableV1Mixin from '@gdbots/schemas/gdbots/common/mixin/taggable/TaggableV1Mixin';
 import GdbotsFormsFormV1Mixin from '@gdbots/schemas/gdbots/forms/mixin/form/FormV1Mixin';
 import GdbotsNcrExpirableV1Mixin from '@gdbots/schemas/gdbots/ncr/mixin/expirable/ExpirableV1Mixin';
@@ -24,6 +25,7 @@ export default class FormV1 extends Message {
       [
         GdbotsNcrNodeV1Mixin.create(),
         GdbotsFormsFormV1Mixin.create(),
+        GdbotsCommonLabelableV1Mixin.create(),
         GdbotsCommonTaggableV1Mixin.create(),
         GdbotsNcrExpirableV1Mixin.create(),
         GdbotsNcrIndexedV1Mixin.create(),
