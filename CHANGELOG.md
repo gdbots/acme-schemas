@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v3.0.0
+* Use `gdbots/schemas` v3.0.0
+* __Add Schemas:__
+  * `acme:iam:node:twitter-app`
+
+
 ## v2.1.0
 * Use `gdbots/schemas` v2.1.0
 

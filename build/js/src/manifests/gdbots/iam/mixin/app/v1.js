@@ -15,4 +15,5 @@ export default [
   'acme:iam:node:ios-app:v1',
   'acme:iam:node:slack-app:v1',
   'acme:iam:node:sms-app:v1',
+  'acme:iam:node:twitter-app:v1',
 ];

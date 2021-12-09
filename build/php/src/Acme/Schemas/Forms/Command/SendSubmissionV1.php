@@ -105,11 +105,11 @@ final class SendSubmissionV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -146,7 +146,7 @@ final class SendSubmissionV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in
@@ -204,10 +204,10 @@ final class SendSubmissionV1 extends AbstractMessage
                 Fb::create('last_name', T\StringType::create())
                     ->build(),
                 Fb::create('email', T\StringType::create())
-                    ->format(Format::EMAIL())
+                    ->format(Format::EMAIL)
                     ->build(),
                 Fb::create('email_domain', T\StringType::create())
-                    ->format(Format::HOSTNAME())
+                    ->format(Format::HOSTNAME)
                     ->build(),
                 Fb::create('address', T\MessageType::create())
                     ->anyOfCuries([

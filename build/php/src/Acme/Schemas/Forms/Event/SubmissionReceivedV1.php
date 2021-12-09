@@ -85,11 +85,11 @@ final class SubmissionReceivedV1 extends AbstractMessage
                     ])
                     ->build(),
                 Fb::create('ctx_ip', T\StringType::create())
-                    ->format(Format::IPV4())
+                    ->format(Format::IPV4)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ipv6', T\StringType::create())
-                    ->format(Format::IPV6())
+                    ->format(Format::IPV6)
                     ->overridable(true)
                     ->build(),
                 Fb::create('ctx_ua', T\TextType::create())
@@ -170,10 +170,10 @@ final class SubmissionReceivedV1 extends AbstractMessage
                 Fb::create('last_name', T\StringType::create())
                     ->build(),
                 Fb::create('email', T\StringType::create())
-                    ->format(Format::EMAIL())
+                    ->format(Format::EMAIL)
                     ->build(),
                 Fb::create('email_domain', T\StringType::create())
-                    ->format(Format::HOSTNAME())
+                    ->format(Format::HOSTNAME)
                     ->build(),
                 Fb::create('address', T\MessageType::create())
                     ->anyOfCuries([
@@ -205,7 +205,7 @@ final class SubmissionReceivedV1 extends AbstractMessage
                     ->max(120)
                     ->build(),
                 Fb::create('gender', T\IntEnumType::create())
-                    ->withDefault(Gender::UNKNOWN())
+                    ->withDefault(Gender::UNKNOWN)
                     ->className(Gender::class)
                     ->build(),
                 Fb::create('sexual_orientation', T\StringEnumType::create())
@@ -243,7 +243,7 @@ final class SubmissionReceivedV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
                 /*
                  * Contains all of the answers submitted from the custom fields on the form.

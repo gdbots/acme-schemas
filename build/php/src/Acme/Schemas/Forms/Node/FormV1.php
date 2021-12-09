@@ -107,10 +107,10 @@ final class FormV1 extends AbstractMessage
                 Fb::create('thank_you_text', T\TextType::create())
                     ->build(),
                 Fb::create('thank_you_url', T\StringType::create())
-                    ->format(Format::URL())
+                    ->format(Format::URL)
                     ->build(),
                 Fb::create('template', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
                 /*
                  * A map containing (HTML, JavaScript, CSS, etc.) that is injected into
@@ -127,7 +127,7 @@ final class FormV1 extends AbstractMessage
                     ->build(),
                 Fb::create('hashtags', T\StringType::create())
                     ->asASet()
-                    ->format(Format::HASHTAG())
+                    ->format(Format::HASHTAG)
                     ->build(),
                 Fb::create('disclaimer', T\TextType::create())
                     ->build(),
@@ -177,7 +177,7 @@ final class FormV1 extends AbstractMessage
                  * - CAN be changed, but in practice once nodes are published you should avoid it if possible
                  */
                 Fb::create('slug', T\StringType::create())
-                    ->format(Format::SLUG())
+                    ->format(Format::SLUG)
                     ->build(),
             ],
             self::MIXINS
