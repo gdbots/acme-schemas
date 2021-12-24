@@ -1,15 +1,15 @@
 // @link http://acme-schemas.gdbots.io/json-schema/acme/forms/event/submission-received/1-0-0.json#
-import DayOfWeek from '@gdbots/schemas/gdbots/common/enums/DayOfWeek';
-import Fb from '@gdbots/pbj/FieldBuilder';
-import FileId from '@gdbots/schemas/gdbots/common/FileId';
-import Format from '@gdbots/pbj/enums/Format';
-import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin';
-import Gender from '@gdbots/schemas/gdbots/common/enums/Gender';
-import Message from '@gdbots/pbj/Message';
-import Month from '@gdbots/schemas/gdbots/common/enums/Month';
-import Schema from '@gdbots/pbj/Schema';
-import SexualOrientation from '@gdbots/schemas/gdbots/common/enums/SexualOrientation';
-import T from '@gdbots/pbj/types';
+import DayOfWeek from '@gdbots/schemas/gdbots/common/enums/DayOfWeek.js';
+import Fb from '@gdbots/pbj/FieldBuilder.js';
+import FileId from '@gdbots/schemas/gdbots/common/FileId.js';
+import Format from '@gdbots/pbj/enums/Format.js';
+import GdbotsPbjxEventV1Mixin from '@gdbots/schemas/gdbots/pbjx/mixin/event/EventV1Mixin.js';
+import Gender from '@gdbots/schemas/gdbots/common/enums/Gender.js';
+import Message from '@gdbots/pbj/Message.js';
+import Month from '@gdbots/schemas/gdbots/common/enums/Month.js';
+import Schema from '@gdbots/pbj/Schema.js';
+import SexualOrientation from '@gdbots/schemas/gdbots/common/enums/SexualOrientation.js';
+import T from '@gdbots/pbj/types/index.js';
 
 export default class SubmissionReceivedV1 extends Message {
   /**
