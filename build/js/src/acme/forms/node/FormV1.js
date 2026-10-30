@@ -111,6 +111,11 @@ export default class FormV1 extends Message {
         Fb.create('pii_impact', T.StringEnumType.create())
           .classProto(PiiImpact)
           .build(),
+        Fb.create('allow_multiple_submissions', T.BooleanType.create())
+          .build(),
+        Fb.create('captcha_enabled', T.BooleanType.create())
+          .withDefault(true)
+          .build(),
         /*
          * A set of strings used for categorization or workflow.
          * Similar to slack channels, github or gmail labels.

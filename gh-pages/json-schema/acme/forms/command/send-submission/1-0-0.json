@@ -327,6 +327,11 @@
       "uniqueItems": true,
       "additionalProperties": false
     },
+    "captcha_token": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535
+    },
     "tags": {
       "type": "object",
       "patternProperties": {

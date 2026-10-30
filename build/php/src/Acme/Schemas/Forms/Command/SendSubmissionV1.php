@@ -148,6 +148,8 @@ final class SendSubmissionV1 extends AbstractMessage
                     ->asASet()
                     ->format(Format::HASHTAG)
                     ->build(),
+                Fb::create('captcha_token', T\TextType::create())
+                    ->build(),
                 /*
                  * Tags is a map that categorizes data or tracks references in
                  * external systems. The tags names should be consistent and descriptive,

@@ -209,6 +209,13 @@
         "low"
       ]
     },
+    "allow_multiple_submissions": {
+      "type": "boolean"
+    },
+    "captcha_enabled": {
+      "type": "boolean",
+      "default": true
+    },
     "labels": {
       "type": "array",
       "items": [

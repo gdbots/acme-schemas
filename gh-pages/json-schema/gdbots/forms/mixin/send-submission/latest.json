@@ -1,5 +1,5 @@
 {
-  "id": "http://acme-schemas.gdbots.io/json-schema/gdbots/forms/mixin/send-submission/1-0-0.json#",
+  "id": "http://acme-schemas.gdbots.io/json-schema/gdbots/forms/mixin/send-submission/1-0-1.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -321,6 +321,11 @@
       ],
       "uniqueItems": true,
       "additionalProperties": false
+    },
+    "captcha_token": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 65535
     }
   },
   "required": [
